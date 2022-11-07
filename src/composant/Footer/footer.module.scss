@@ -1,0 +1,26 @@
+.footer{
+    width: 100%;
+    height: 209px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--colorFooter);
+   
+    img{
+        width: 122px;
+        height: 40px;
+    }
+    .div {
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 30px;
+        margin-bottom: -50px;
+    }
+    .paratext {
+        font-size: 22px;
+        color: var( --ColorTexteTitre);
+        padding-top: 28px;
+    }
+}

@@ -1,0 +1,55 @@
+.header {
+    // border : 1px solid red;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    align-content: flex-start;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 50px;
+ 
+    
+    img {
+        height: 68px;
+        width: 210.32px;
+        left: 100px;
+    }
+
+    .navigation{
+        // border : 1px solid red;
+        width: 18%;
+        height: 34px;
+        font-size: 24px;
+        padding:20px;
+        padding-left: 0px;
+        padding-right:0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        top: 3vh;
+
+            .accueil{
+                // border : 1px solid green;
+                display: flex;
+                width: 30%;
+                position: relative;
+                left: 24px;
+            }
+            .apropos {
+                // border : 1px solid blue;
+                width: 50%;
+                padding-left: 36px;
+                
+            }
+
+            .accueil, .apropos {
+                cursor: pointer;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+         
+    }
+}
+

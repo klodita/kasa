@@ -1,0 +1,39 @@
+*, *::before, ::after
+{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    width: 100%;
+  
+}
+
+body {
+    margin :0;
+    padding :0;
+    width: 100%;
+    font-family: var(--font-familly);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color : var(--primaryColor);
+    background-color: white;
+}
+
+a{
+    text-decoration: none;
+    color: var(--primaryColor);
+}
+
+
+h1, h2, h3 {
+    margin:0;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
