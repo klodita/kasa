@@ -5,10 +5,6 @@ import fleche from '../../assets/images/fleche.svg'
 import React, { useState } from 'react'
 
 export function DivOpen({ titre, description }) {
-  if (!titre) {
-    console.log(titre)
-  }
-
   const [open, setOpen] = useState(false)
   return (
     <div className={collapse.divCollapse}>
