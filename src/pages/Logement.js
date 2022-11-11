@@ -1,10 +1,12 @@
+import React from 'react'
 import Header from '../composant/Header/Header'
-import Content from '../composant/Content/Content_Logement'
+import Content from '../composant/Content/Logement/Content_Logement'
 import Footer from '../composant/Footer/Footer'
+import styles from './App.module.scss'
 
 function Location() {
   return (
-    <div>
+    <div className={styles.appContainer}>
       <Header />
       <Content />
       <Footer />

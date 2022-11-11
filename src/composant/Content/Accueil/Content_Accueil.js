@@ -1,10 +1,10 @@
-import styles from '../../composant/Content/content.module.scss'
+import styles from '../../../composant/Content/content.module.scss'
 import cart from './cart.module.scss'
-import image from '../../assets/images/header_AccueilDeskop.png'
+import image from '../../../assets/images/header_AccueilDeskop.png'
 import { NavLink } from 'react-router-dom'
-import { logement } from '../../assets/API/Logement.js'
+import { logement } from '../../../assets/API/Logement.js'
 
-export function Logement({ image, titre, id, location }) {
+export function Logement({ image, titre, id }) {
   return (
     <div className={cart.cart} id={id}>
       <img src={image} alt={`Ile-de-France ${titre}`} className={cart.cover} />
@@ -26,7 +26,7 @@ function Content() {
       <div className={cart.location}>
         <div className={cart.cartLocation}>
           {location.map((l) => (
-            <NavLink key={l.id} to={'/logement/' + l.id + '#'}>
+            <NavLink key={l.id} to={'/logement/' + l.id + '/'}>
               <Logement image={l.cover} titre={l.title} key={l.id} />
             </NavLink>
           ))}

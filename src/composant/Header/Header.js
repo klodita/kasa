@@ -8,16 +8,21 @@ function Header() {
         <img src={logo} alt="logo Kasa" />
       </div>
 
-      <div className={styles.navigation}>
-        <a href="/home" className={styles.accueil}>
+      <nav className={styles.navigation}>
+        <ul>
+          <a href="/home" className={styles.accueil}>
+            {' '}
+            Accueil
+          </a>
+        </ul>
+        <ul>
           {' '}
-          Accueil
-        </a>
-        <a href="/apropos" className={styles.apropos}>
-          {' '}
-          A Propos
-        </a>
-      </div>
+          <a href="/apropos" className={styles.apropos}>
+            {' '}
+            A Propos
+          </a>
+        </ul>
+      </nav>
     </header>
   )
 }

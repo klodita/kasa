@@ -1,7 +1,7 @@
-import styles from '../../composant/Content/content.module.scss'
-import collapse from '../Content/collapse.module.scss'
-import image from '../../assets/images/header_AproposDesktop.png'
-import fleche from '../../assets/images/fleche.svg'
+import styles from '../../../composant/Content/content.module.scss'
+import collapse from '../Apropos/collapse.module.scss'
+import image from '../../../assets/images/header_AproposDesktop.png'
+import fleche from '../../../assets/images/fleche.svg'
 import React, { useState } from 'react'
 
 export function DivOpen({ titre, description }) {
