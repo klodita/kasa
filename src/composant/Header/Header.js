@@ -11,14 +11,11 @@ function Header() {
       <nav className={styles.navigation}>
         <ul>
           <a href="/home" className={styles.accueil}>
-            {' '}
             Accueil
           </a>
         </ul>
         <ul>
-          {' '}
           <a href="/apropos" className={styles.apropos}>
-            {' '}
             A Propos
           </a>
         </ul>

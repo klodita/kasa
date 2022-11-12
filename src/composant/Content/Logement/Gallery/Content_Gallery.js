@@ -1,6 +1,6 @@
 import React from 'react'
 import { Slide } from 'react-slideshow-image'
-import { logement } from '../../../assets/API/Logement'
+import { logement } from '../../../../assets/API/Logement'
 import { useParams } from 'react-router-dom'
 import gallery from './gallery.module.scss'
 import 'react-slideshow-image/dist/styles.css'

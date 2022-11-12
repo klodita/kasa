@@ -1,0 +1,64 @@
+.Divpresentation {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top : 40px;
+
+
+    .presentation1 {
+        .titre, .sousTitre {
+            width: 70%;
+        }
+        
+        .titre{
+            margin-bottom : 15px;
+        }
+    
+        .sousTitre, .hostName{
+            font-size: 20px;
+        }
+    }
+
+    .presentation2{
+        width: 18%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        position: relative;
+
+        .hostName{
+            width: 40%;
+            display: flex;
+            margin-right: 30%;
+            position: absolute;
+        }
+
+        .host{
+            width: 74px;
+            height: 74px;
+            object-fit: cover;
+            border-radius: 50px;
+            display: flex;
+            position:absolute;
+        }
+    }
+}
+
+.Divtag{
+    width: 75%;
+    margin-top: 15px;
+    display: flex;
+    position: relative;
+
+}
+
+.DivCollapse{
+    // border:1px solid blue;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+

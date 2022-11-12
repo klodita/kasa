@@ -1,6 +1,9 @@
-    .pictures, .img{
+@use '../../../../assets/styles/Breakpoint';
+
+  .pictures, .img{
         width: 100%;
         height: 550px;
+       
     }
 
     .pictures{
@@ -17,6 +20,15 @@
             bottom:50px;
             z-index: 2;
         }
+        // @include Breakpoint.breakpoint-desktop-max($break-max:1440px){
+        //     height: 415px;
+        // }
+        // @include Breakpoint.breakpoint-mobile-max($break-max:375px){
+        //     width: 335px;
+        //     height: 255px;
+        //     border:1px solid red;
+
+        // }
     }
 
     .img{

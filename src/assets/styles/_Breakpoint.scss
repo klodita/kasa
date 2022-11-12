@@ -1,0 +1,25 @@
+//Création de mixin Breakpoint pour les différents média-query qui seront appliquées sur les différentes styles scss;
+
+@mixin breakpoint-desktop-min($break-min:0){
+    @media (min-width:$break-min){
+        @content;
+    }
+}
+
+@mixin breakpoint-desktop-max($break-max:0){
+    @media (max-width:$break-max){
+        @content;
+    }
+}
+
+@mixin breakpoint-tablette-max($break-max:0){
+    @media(max-width:$break-max){
+        @content;
+    }
+}
+
+@mixin breakpoint-mobile-max($break-max:0){
+    @media (max-width:$break-max){
+        @content;
+    }
+}

@@ -9,7 +9,9 @@ function ContentErreur() {
         <img src={image} alt="erreur 404" className={erreur.erreur} />
         <div className={erreur.titreErreur}>
           <h1> Oups! La page que vous demandez n'existe pas. </h1>
-          <a href="/home">Retourner sur la page d’accueil</a>
+          <a href="/home">
+            <h2>Retourner sur la page d’accueil</h2>
+          </a>
         </div>
       </div>
     </main>

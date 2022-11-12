@@ -34,11 +34,13 @@
         padding-top: 20px;
         margin-top: 60px;
         margin-bottom: 50px;
-        font-size: 20px;
         cursor: pointer;
         &:hover{
             text-decoration: underline;
         }
         
+        h2{
+            font-size: 22px;
+        }
     }
 }
