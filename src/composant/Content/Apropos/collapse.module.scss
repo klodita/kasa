@@ -31,11 +31,11 @@
         float: left;
     }
     .fa_solid{
-        width: 2%;
+        width: 2.5%;
         display: flex;
         position : relative;
         bottom :1px;
-        left :126vh;
+        left : 98%;
         color : var(--ColorTexteTitre);
         background-color: var(--primaryColor);
         z-index : 2;
@@ -44,11 +44,11 @@
 }
     
     .fatrue {
-        width: 2%;
+        width: 2.5%;
         display: flex;
         position : relative;
         bottom :-13px;
-        left :139vh;
+        left :98%;
         color : var(--ColorTexteTitre);
         background-color: var(--primaryColor);
         transform: rotate(-180deg);
@@ -76,8 +76,6 @@
         background-color: var(--collapseOpenColor);
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
-     
-    
     }
 
     .description {

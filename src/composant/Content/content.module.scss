@@ -1,3 +1,7 @@
+@use '../../assets/styles/Breakpoint';
+@use '../../assets/styles/Mixin/mixin_Content';
+
+
 .content {
     width: 100%;
     height: auto;
@@ -6,6 +10,9 @@
     padding-right: 100px;
     margin-bottom : 30px;
     flex : fill;
+
+    @include mixin_Content.content-Margin-Body;
+
  
     .imgHeader{
         position: relative;

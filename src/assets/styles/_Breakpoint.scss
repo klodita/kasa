@@ -1,4 +1,10 @@
-//Création de mixin Breakpoint pour les différents média-query qui seront appliquées sur les différentes styles scss;
+
+//Media queries Deskop//////////////////////////////////////////////
+@mixin breakpoint-Desktop($break-min:0, $break-max:0){
+    @media (min-width:$break-min) and (max-width: $break-max){
+        @content;
+    }
+}
 
 @mixin breakpoint-desktop-min($break-min:0){
     @media (min-width:$break-min){
@@ -12,14 +18,47 @@
     }
 }
 
+
+
+//Media queries Tablette//////////////////////////////////////////
+
+@mixin breakpoint-Tablette($break-min:0, $break-max:0){
+    @media (min-width:$break-min) and (max-width: $break-max){
+        @content;
+    }
+}
+
 @mixin breakpoint-tablette-max($break-max:0){
     @media(max-width:$break-max){
         @content;
     }
 }
 
+
+
+//Media queries Mobile//////////////////////////////////////////
+
+@mixin breakpoint-Mobile($break-min:0, $break-max:0){
+    @media (min-width:$break-min) and (max-width: $break-max){
+        @content;
+    }
+}
+
 @mixin breakpoint-mobile-max($break-max:0){
     @media (max-width:$break-max){
+        @content;
+    }
+}
+@mixin breakpoint-mobile-min($break-min:0){
+    @media (min-width:$break-min){
+        @content;
+    }
+}
+
+
+// Intermédiaire
+@mixin breakpoint($break-min:0, $break-max:0){
+    @media (min-width:$break-min) and (max-width: $break-max){
         @content;
     }
 }

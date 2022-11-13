@@ -1,0 +1,24 @@
+@use '../Breakpoint';
+
+@mixin picturesImg{
+    
+        //Media Queries Desktop
+        @include Breakpoint.breakpoint-Desktop($break-min:992px,$break-max:1779px){
+            height: 415px; 
+        }
+        
+        //Media Queries Mobiles
+        @include Breakpoint.breakpoint-Tablette($break-min:0px, $break-max:767px){
+          
+            @include Breakpoint.breakpoint-Mobile($break-min:501px, $break-max:767px){
+                height: 280px;
+            }
+            @include Breakpoint.breakpoint-Mobile($break-min:375px, $break-max:500px){
+               height: 255px;
+            }
+            @include Breakpoint.breakpoint-mobile-max($break-max:374px){
+                height: 240px;
+                top:-20px;
+            }
+        }
+}

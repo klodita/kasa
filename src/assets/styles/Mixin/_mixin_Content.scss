@@ -1,0 +1,51 @@
+@use '../Breakpoint';
+
+
+@mixin content-Margin-Body{
+    
+        //Media Queries Desktop
+        @include Breakpoint.breakpoint-Desktop($break-min:992px,$break-max:1439px){
+            padding-left: 75px;
+            padding-right: 75px;
+        }
+
+        //Media Queries Tablette
+        @include Breakpoint.breakpoint-Tablette($break-min:768px, $break-max:991px){
+            padding-left: 50px;
+            padding-right: 50px;                
+        }
+
+        //Media Queries Mobiles
+        @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:767px){
+
+            @include Breakpoint.breakpoint-Mobile($break-min:601px, $break-max:767px){
+                padding-left: 38px;
+                padding-right: 38px;
+            }
+            @include Breakpoint.breakpoint-Mobile($break-min:501px, $break-max:600px){
+                padding-left: 25px;
+                padding-right: 25px;
+            }
+            @include Breakpoint.breakpoint-Mobile($break-min:376px, $break-max:500px){
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            @include Breakpoint.breakpoint-mobile-max($break-max:375px){
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            @include Breakpoint.breakpoint-mobile-max($break-max:294px){
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            @include Breakpoint.breakpoint-mobile-max($break-max:284px){
+                padding-left: 9px;
+                padding-right: 9px;
+            }
+                 
+    }
+}
+
+
+
+

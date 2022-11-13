@@ -1,0 +1,13 @@
+@use '../Breakpoint';
+
+@mixin mainHeight-Logement {
+    @include Breakpoint.breakpoint-Mobile($break-min:426px, $break-max:500px){
+        margin-top: -10px;
+    }
+    @include Breakpoint.breakpoint-Mobile($break-min:376px, $break-max:425px){
+        margin-top: -20px;
+    }
+    @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:375px){
+        margin-top: -25px;
+    }
+}
