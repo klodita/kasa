@@ -1,7 +1,23 @@
 @use '../Breakpoint';
 
+@mixin mainHeight-Logement-Galery {
+    @include Breakpoint.breakpoint-Mobile($break-min:426px, $break-max:500px){
+        margin-top: -10px;
+    }
+    @include Breakpoint.breakpoint-Mobile($break-min:376px, $break-max:425px){
+        margin-top: -20px;
+    }
+    @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:375px){
+        margin-top: -25px;
+    }
+}
+
 @mixin picturesImg{
-    
+
+    //Intermédiaire
+     @include Breakpoint.breakpoint($break-min:0px, $break-max:767px){
+        margin-bottom: 10px;
+     }
         //Media Queries Desktop
         @include Breakpoint.breakpoint-Desktop($break-min:992px,$break-max:1779px){
             height: 415px; 
@@ -21,4 +37,54 @@
                 top:-20px;
             }
         }
+}
+
+@mixin pictures{
+
+    @include Breakpoint.breakpoint($break-min:0px, $break-max:767px){
+       border-radius: 10px;
+    }
+}
+
+@mixin fleches-Gauche-Droite{
+     //Intermédiaire
+     @include Breakpoint.breakpoint($break-min:0px, $break-max:767px){
+        width: 24px;
+        height: 24px;
+     }
+
+    //Media queries Mobile 
+    @include Breakpoint.breakpoint-Mobile($break-min:501px, $break-max:767px){
+        width: 44px;
+        height: 44px;
+        top:calc(-280px/20);
+    }
+    @include Breakpoint.breakpoint-Mobile($break-min:375px, $break-max:500px){
+        @include Breakpoint.breakpoint;
+        top:calc(-255px/20);
+    }
+    @include Breakpoint.breakpoint-mobile-max($break-max:374px){
+        @include Breakpoint.breakpoint;
+        top:calc(-240px/20);
+    }
+}
+
+@mixin fleche-gauche {
+     //Media queries Mobile 
+    @include Breakpoint.breakpoint-Mobile($break-min:501px, $break-max:767px){
+        left:10px;
+    }
+    @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:500px){
+        left: 5px; 
+    }
+}
+
+@mixin fleche-droite {
+     //Media queries Mobile 
+    @include Breakpoint.breakpoint-Mobile($break-min:501px, $break-max:767px){
+      right: 10px;
+    }
+    @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:500px){
+        right: 5px; 
+    }
 }

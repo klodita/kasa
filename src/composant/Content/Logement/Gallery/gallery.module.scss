@@ -1,22 +1,20 @@
-@use '../../../../assets/styles/Mixin/mixin_Logement';
 @use '../../../../assets/styles/Mixin/mixin_Gallery.scss';
 @use '../../../../assets/styles/Breakpoint';
 
 main{
-    @include mixin_Logement.mainHeight-Logement;
+    @include mixin_Gallery.mainHeight-Logement-Galery;
 }
 
 .pictures, .img{
     width: 100%;
     height: 550px;
         @include mixin_Gallery.picturesImg;
-        
-    }
+}
 
-    .pictures{
-      
-        border-radius: 25px ;
-        overflow: hidden;
+.pictures{
+    border-radius: 25px;
+    overflow: hidden;
+        @include mixin_Gallery.pictures;
       
         .numero{
             width: 100%;
@@ -33,7 +31,7 @@ main{
             }
         }
         
-    }
+}
 
 .img{
     object-fit: cover;
@@ -49,25 +47,17 @@ main{
         &:hover{
             cursor: pointer;
         }
-        @include Breakpoint.breakpoint-mobile-max($break-max:700px){
-            width: 24px;
-            height: 24px;
-            top:calc(-255px/20);
-        }
+        @include mixin_Gallery.fleches-Gauche-Droite;
 }
 
 .flecheGauche {
     left: 20px; 
-    @include Breakpoint.breakpoint-mobile-max($break-max:700px){
-        left: 5px; 
-    }
+        @include mixin_Gallery.fleche-gauche;
 }
 
 .flecheDroite {
     right: 20px;
-    @include Breakpoint.breakpoint-mobile-max($break-max:700px){
-        right: 5px; 
-    }
+    @include mixin_Gallery.fleche-droite;
 }
 
        

@@ -1,5 +1,6 @@
 @use '../../assets/styles/Breakpoint';
 @use '../../assets/styles/Mixin/mixin_Content';
+@use '../../assets/styles/Mixin/mixin_Logement';
 
 
 .content {
@@ -12,6 +13,7 @@
     flex : fill;
 
     @include mixin_Content.content-Margin-Body;
+   
 
  
     .imgHeader{

@@ -1,9 +1,12 @@
+@use '../../../assets/styles/Mixin/mixin_Logement';
+
 .Divpresentation {
+    // border: 1px solid red;
     width: 100%;
     display: flex;
     flex-direction: row;
     margin-top : 40px;
-
+      
 
     .presentation1 {
         .titre, .sousTitre {
@@ -11,6 +14,7 @@
         }
         
         .titre{
+            // font-size: 36px;
             margin-bottom : 15px;
         }
     
@@ -20,6 +24,7 @@
     }
 
     .presentation2{
+       
         width: 18%;
         display: flex;
         flex-direction: row;
@@ -43,6 +48,7 @@
             position:absolute;
         }
     }
+   
 }
 
 .Divtag{
@@ -50,7 +56,7 @@
     margin-top: 15px;
     display: flex;
     position: relative;
-
+        @include mixin_Logement.Divtag;
 }
 
 .DivCollapse{
@@ -62,3 +68,4 @@
 }
 
 
+ @include mixin_Logement.Divpresentation;
