@@ -1,0 +1,108 @@
+@use '../Breakpoint';
+
+@mixin divCollapse{
+    @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:767px){
+        // border: 1px solid pink;
+       
+        .collapseClose{
+            // border: 1px solid blue;
+            height: 29px;
+            padding: 10px;
+            border-radius: 5px;
+
+            @include Breakpoint.breakpoint-Mobile($break-min:713px, $break-max:767px){
+                // border: 1px solid blue;
+                height: 39px;
+              
+                border-radius: 5px;
+            }
+            @include Breakpoint.breakpoint-Mobile($break-min:500px, $break-max:712px){
+                height: 40px;
+              
+            }
+        }
+
+        .titreh2{
+            font-size: 13px;
+            @include Breakpoint.breakpoint-Mobile($break-min:713px, $break-max:767px){
+                font-size: 18px;
+                padding: 15px;
+            }
+            @include Breakpoint.breakpoint-Mobile($break-min:500px, $break-max:712px){
+                font-size: 14px;
+                  padding: 10px;
+            }
+            
+        }
+        .hrefClose{
+            // border: 1px solid green;
+            top:0;
+        }
+    }
+}
+
+@mixin hrefOpen{
+    @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:767px){
+        bottom: 50px;
+    }
+    
+}
+
+@mixin fa_solid{
+    @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:767px){
+        // border: 1px solid orange;
+        left:91%;
+        width: 7%;
+        @include Breakpoint.breakpoint-Mobile($break-min:713px, $break-max:767px){
+            left:93%;
+            width: 6%;
+          
+        }
+    }
+}
+
+@mixin fatrue{
+    @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:767px){
+        // border: 1px solid orange;
+        bottom: 0px;
+        left:96%;
+        width: 5%;
+        @include Breakpoint.breakpoint-Mobile($break-min:713px, $break-max:767px){
+            left:95%;
+            width: 5%;
+            top:-7px;
+        }
+        @include Breakpoint.breakpoint-Mobile($break-min:500px, $break-max:712px){
+            top:-7px
+        }
+        
+    }
+}
+
+@mixin annonces{
+    @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:767px){
+     
+        .annonces{
+            //  border: 1px solid black;
+            margin-bottom: 35px;
+            top:15px;
+            max-block-size: 110px;
+            writing-mode: horizontal-tb;
+
+             .description{
+                font-size:12px;
+                padding-top: 18px;
+                margin-top: 0;
+                top:0;
+            }
+
+        }
+        
+       
+            
+    }
+ 
+}
+
+
+

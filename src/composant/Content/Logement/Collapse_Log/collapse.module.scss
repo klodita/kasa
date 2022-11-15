@@ -1,8 +1,14 @@
+@use '../../../../assets/styles/Mixin/mixin_CollapseLog.scss';
+
+
 .divCollapse {
+    // border:1px solid red;
     width: 100%;
     display: flex;
     flex-direction: column;
     position: relative;
+
+   
     
     .collapseClose{
         
@@ -21,6 +27,7 @@
         z-index : 1;
         // border:1px solid rgb(6, 34, 190);
     }
+
     .titreh2{
         // border:1px solid rgb(68, 188, 13);
         width: 30%;
@@ -36,7 +43,6 @@
         position: relative;
         top :1px;
         z-index:1
-
     }
 
     .fa_solid{
@@ -49,84 +55,75 @@
         color : var(--ColorTexteTitre);
         background-color: var(--primaryColor);
         z-index : 2;
-
+        @include mixin_CollapseLog.fa_solid;
     }
+
+    @include mixin_CollapseLog.divCollapse;
 }
-     .hrefOpen{
-        // border:1px solid blue;
-        width: 100%;
-        display:flex;
-        position: relative;
-        bottom :118px;
-        z-index:1
 
-    }
-    .fatrue {
-        // border: 1px solid green;
-        width: 4%;
-        display: flex;
-        position : relative;
-        left : 97%;
-        color : var(--ColorTexteTitre);
-        background-color: var(--primaryColor);
-        transform: rotate(-180deg);
-        z-index : 3;
-       
-    }
+.hrefOpen{
+    // border:1px solid blue;
+    width: 100%;
+    display:flex;
+    position: relative;
+    bottom :56px;
+    z-index:1;
 
-    .Descri{
-        // border:1px solid green;
-        width: 60%;
-        display: flex;
-        float:left;
-       
-    }
-    .Equip{
-        // border: 1px solid red;
-        width: 60%;
-        display: flex;
-        margin-left: 50px;
-        
-    }
+    @include mixin_CollapseLog.hrefOpen;
+}
+
+.fatrue {
+    // border: 1px solid green;
+    width: 4%;
+    display: flex;
+    position : relative;
+    left : 97%;
+    color : var(--ColorTexteTitre);
+    background-color: var(--primaryColor);
+    transform: rotate(-180deg);
+    z-index : 3;
+    @include mixin_CollapseLog.fatrue;
+}
+
+
    
-    .annonces {
+.annonces {
         
-        height: 235px;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: 20px;
-        padding-top: 20px;
-        padding-bottom: 30px;
-        padding-bottom: 50px;
-        margin-bottom: 60px;
-        margin-top: -20px;
-        min-height: 110px;
-        color: var(--primaryColor);
-        position: relative;
-        top:13px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    margin-top: -20px;
+    margin-bottom: 130px;
+    min-height: 110px;
+    color: var(--primaryColor);
+    position: relative;
+    top:13px;
      
 
         .description {
-        // border:1px solid green;
-        width:100%;
-        display: flex;
-        padding: 20px;
-        padding-top: 40px;
-        padding-bottom: 20px;
-        margin-top: 30px;
-        font-size: 20px;
-        border:var(--Border-Collapse-Loge);
-        background-color: var(--collapseOpenColor);
-        border-bottom-left-radius: 15px;
-        border-bottom-right-radius: 15px;
-        position: absolute;
-        top:-30px;
-        right:0;
-    }
-    
-    }
+            // border:1px solid green;
+            width:100%;
+            display: flex;
+            padding: 20px;
+            padding-top: 40px;
+            padding-bottom: 20px;
+            margin-top: 30px;
+            font-size: 20px;
+            border:var(--Border-Collapse-Loge);
+            background-color: var(--collapseOpenColor);
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            position: absolute;
+            top:-30px;
+            right:0;
+        }
+ 
+       
+}
 
-   
+  @include mixin_CollapseLog.annonces;  
    

@@ -61,7 +61,7 @@
     }
     @include Breakpoint.breakpoint-Mobile($break-min:375px, $break-max:500px){
         @include Breakpoint.breakpoint;
-        top:calc(-255px/20);
+        top:calc(-255px/15);
     }
     @include Breakpoint.breakpoint-mobile-max($break-max:374px){
         @include Breakpoint.breakpoint;
@@ -82,7 +82,7 @@
 @mixin fleche-droite {
      //Media queries Mobile 
     @include Breakpoint.breakpoint-Mobile($break-min:501px, $break-max:767px){
-      right: 10px;
+        right: 10px;
     }
     @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:500px){
         right: 5px; 

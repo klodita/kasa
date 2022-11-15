@@ -1,6 +1,6 @@
 import styles from '../../../composant/Content/content.module.scss'
 import logeStyle from './logement.module.scss'
-import collapseStyle from './Collapse_Log/collapse.module.scss'
+// import collapseStyle from './Collapse_Log/collapse.module.scss'
 import Tag from './Tag/Tag'
 import Etoiles from './Etoiles/Etoiles'
 import CollapseLog from './Collapse_Log/Collapse'
@@ -30,15 +30,6 @@ function Logement() {
           <h1 className={logeStyle.titre}>{logementIndiv.title}</h1>
           <h2 className={logeStyle.sousTitre}>{logementIndiv.location}</h2>
         </div>
-
-        <div className={logeStyle.presentation2}>
-          <h3 className={logeStyle.hostName}>{logementIndiv.host.name}</h3>
-          <img
-            className={logeStyle.host}
-            src={logementIndiv.host.picture}
-            alt={logementIndiv.host.name}
-          />
-        </div>
       </div>
 
       <div className={logeStyle.Divtag}>
@@ -47,25 +38,40 @@ function Logement() {
         </span>
       </div>
 
-      <div className={logeStyle.DivEtoile}>
-        <span>
-          <Etoiles />
-        </span>
+      <div className={logeStyle.DivHostEtoile}>
+        <div className={logeStyle.presentation2}>
+          <h3 className={logeStyle.hostName}>{logementIndiv.host.name}</h3>
+          <img
+            className={logeStyle.host}
+            src={logementIndiv.host.picture}
+            alt={logementIndiv.host.name}
+          />
+        </div>
+        <div className={logeStyle.DivEtoile}>
+          <span>
+            <Etoiles />
+          </span>
+        </div>
       </div>
 
       <div className={logeStyle.DivCollapse}>
-        <div className={collapseStyle.Descri}>
-          <CollapseLog
-            titre="Description"
-            description={logementIndiv.description}
-          />
+        <div className={logeStyle.DivCollapse1}>
+          <div className={logeStyle.Descri}>
+            <CollapseLog
+              titre="Description"
+              description={logementIndiv.description}
+            />
+          </div>
         </div>
-        <div className={collapseStyle.Equip}>
-          <CollapseLog
-            titre="Equipements"
-            description={<Equipmt />}
-            className={logeStyle.ess}
-          />
+
+        <div className={logeStyle.DivCollapse2}>
+          <div className={logeStyle.Equip}>
+            <CollapseLog
+              titre="Equipements"
+              description={<Equipmt />}
+              className={logeStyle.ess}
+            />
+          </div>
         </div>
       </div>
     </main>

@@ -1,14 +1,19 @@
+@use '../../../../assets/styles/Mixin/mixin_Logement';
 
 .img{
-    width: 20%;
+    // border: 1px solid blue;
+    width: 36px;
     display: flex;
+    margin:5px;
+
+   
 }
 
 .etoile{
-   width: 12%;
+    width: 100%;
     display: flex;
-    float:right;
-    position: relative;
-    bottom:55px;
+    position: absolute;
+    left: 30px;
 }
 
+@include mixin_Logement.etoileImg;

@@ -1,6 +1,7 @@
 import styles from '../../../composant/Content/content.module.scss'
 import cart from './cart.module.scss'
 import image from '../../../assets/images/header_AccueilDeskop.png'
+import img from '../../../assets/images/header_AccueilMobile.png'
 import { NavLink } from 'react-router-dom'
 import { logement } from '../../../assets/API/Logement.js'
 
@@ -20,7 +21,17 @@ function Content() {
   return (
     <main className={styles.content}>
       <div className={styles.imgHeader}>
-        <img src={image} alt="la mer à la campagne" />
+        <img
+          src={image}
+          alt="la mer à la campagne"
+          className={styles.HeaderDesk}
+        />
+        <img
+          src={img}
+          alt="la mer à la campagne"
+          className={styles.HeaderMob}
+        />
+
         <h1 className={styles.titre}>Chez vous, partout et ailleurs</h1>
       </div>
       <div className={cart.location}>
