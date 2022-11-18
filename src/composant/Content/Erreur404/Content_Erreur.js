@@ -6,15 +6,15 @@ import { Link } from 'react-router-dom'
 function ContentErreur() {
   return (
     <main className={styles.content}>
-      <div className={erreur.divErreur}>
+      <section className={erreur.divErreur}>
         <img src={image} alt="erreur 404" className={erreur.erreur} />
         <div className={erreur.titreErreur}>
           <h1> Oups! La page que vous demandez n'existe pas. </h1>
           <Link to="/home">
-            <h2>Retourner sur la page d’accueil</h2>
+            <h2 className={erreur.titreh1}>Retourner sur la page d’accueil</h2>
           </Link>
         </div>
-      </div>
+      </section>
     </main>
   )
 }
