@@ -2,6 +2,7 @@
 @use '../../assets/styles/Mixin/mixin_Header';
 
 .header {
+
     width: 100%;
     height: 140px;
     display: flex;
@@ -23,39 +24,61 @@ img {
 
 
 .navigation{
-    width: 18%;
-    height: 34px;
-    font-size: 24px;
-    padding:20px;
-    padding-left: 0px;
-    padding-right:0;
+    width: 19%;
+    height: calc(140px/2);
+    font-size: 1.5rem;
+    padding-top: 0;
+    padding-bottom: calc((140px/2)/2.5);
+    padding-left: 20px;
+    padding-right:20px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items:center;
     position: relative;
-    top: 3vh;
 
       @include mixin_Header.navigation-Header;
       
 
 
-.accueil{
+.accueil{ 
+    width: 28%;
     display: flex;
-    width: 30%;
-    position: relative;
-    left: 24px;
+    position: absolute;
+    float: right;
+    left: 0;
 
         @include mixin_Header.accueil;        
+}
+.accueilActive{
+   
+    width: 28%;
+    display: flex;
+    position: absolute;
+    float: right;
+    left: 0;
+    text-decoration: underline;
+
+        @include mixin_Header.accueil; 
 }
 
 
 .apropos {
-    width: 100%;
-    position: relative;
-    text-align: right;
-    padding-right: 5px;
+    width: 34%;
+    display: flex;
+    position: absolute;
     float: left;
+    right: 0;
 
+        @include mixin_Header.apropos;
+}
+
+.aproposActive{
+    width: 34%;
+    display: flex;
+    position: absolute;
+    float: left;
+    right: 0;
+    text-decoration: underline;
         @include mixin_Header.apropos;
 }
 

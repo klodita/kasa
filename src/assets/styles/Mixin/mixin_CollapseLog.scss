@@ -10,13 +10,7 @@
             padding: 10px;
             border-radius: 5px;
 
-            @include Breakpoint.breakpoint-Mobile($break-min:713px, $break-max:767px){
-                // border: 1px solid blue;
-                height: 39px;
-              
-                border-radius: 5px;
-            }
-            @include Breakpoint.breakpoint-Mobile($break-min:500px, $break-max:712px){
+            @include Breakpoint.breakpoint-Mobile($break-min:425px, $break-max:767px){
                 height: 40px;
               
             }
@@ -24,19 +18,28 @@
 
         .titreh2{
             font-size: 13px;
-            @include Breakpoint.breakpoint-Mobile($break-min:713px, $break-max:767px){
-                font-size: 18px;
-                padding: 15px;
-            }
-            @include Breakpoint.breakpoint-Mobile($break-min:500px, $break-max:712px){
-                font-size: 14px;
-                  padding: 10px;
+            @include Breakpoint.breakpoint-Mobile($break-min:425px, $break-max:767px){
+                font-size: 16px;
+                padding: 10px;
             }
             
         }
         .hrefClose{
             // border: 1px solid green;
             top:0;
+        }
+
+        .fa_solid{
+            @include Breakpoint.breakpoint-Mobile($break-min:425px, $break-max:767px){
+                left:93.5%;
+                width: 6%;
+            }
+            @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:424px){
+                left:93%;
+                width: 6%;
+              
+            }
+
         }
     }
 }
@@ -48,60 +51,108 @@
     
 }
 
-@mixin fa_solid{
-    @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:767px){
-        // border: 1px solid orange;
-        left:91%;
-        width: 7%;
-        @include Breakpoint.breakpoint-Mobile($break-min:713px, $break-max:767px){
-            left:93%;
-            width: 6%;
-          
-        }
-    }
-}
 
 @mixin fatrue{
-    @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:767px){
-        // border: 1px solid orange;
-        bottom: 0px;
-        left:96%;
+
+    @include Breakpoint.breakpoint-Mobile($break-min:425px, $break-max:767px){
+        top:21px;
+        left:93%;
         width: 5%;
-        @include Breakpoint.breakpoint-Mobile($break-min:713px, $break-max:767px){
-            left:95%;
-            width: 5%;
-            top:-7px;
-        }
-        @include Breakpoint.breakpoint-Mobile($break-min:500px, $break-max:712px){
-            top:-7px
-        }
-        
+    }
+    @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:424px){
+        // border: 1px solid orange;
+        top: 35px;
+        left:92%;
+        width: 5%;
     }
 }
 
 @mixin annonces{
-    @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:767px){
-     
-        .annonces{
-            //  border: 1px solid black;
-            margin-bottom: 35px;
-            top:15px;
-            max-block-size: 110px;
+
+    @include Breakpoint.breakpoint-Desktop($break-min:1381px, $break-max:1919px){
+        // border: green 1px solid;
+        margin-block-end: 30%;
+        writing-mode: horizontal-tb;
+    }
+    @include Breakpoint.breakpoint-Desktop($break-min:1201px, $break-max:1380px){
+        // border: green 1px solid;
+        margin-block-end: 35%;
+        writing-mode: horizontal-tb;
+    }
+    @include Breakpoint.breakpoint-Desktop($break-min:1071px, $break-max:1200px){
+        // border: green 1px solid;
+        margin-block-end: 38%;
+        writing-mode: horizontal-tb;
+    }
+    @include Breakpoint.breakpoint-Desktop($break-min:992px, $break-max:1070px){
+        // border: green 1px solid;
+        margin-block-end: 45%;
+        writing-mode: horizontal-tb;
+    }
+    
+    @include Breakpoint.breakpoint-Tablette($break-min:768px, $break-max:991px){
+        // border: green 1px solid;
+        margin-block-end: 55%;
+        writing-mode: horizontal-tb;
+
+        @include Breakpoint.breakpoint-Tablette($break-min:860px, $break-max:991px){
+            // border: green 1px solid;
+            margin-block-end: 45%;
             writing-mode: horizontal-tb;
-
-             .description{
-                font-size:12px;
-                padding-top: 18px;
-                margin-top: 0;
-                top:0;
-            }
-
         }
+    }
+
+    @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:767px){
+        //  border: 1px solid black;
+        height: 182px;
+        padding: 0;
+        padding-bottom: 0;
+        margin-block-end: 0%;
+        writing-mode: horizontal-tb;
+        border:var(--Border-Collapse-Loge);
+        background-color: var(--collapseOpenColor);
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        top:12px;
         
-       
-            
+        @include Breakpoint.breakpoint-Mobile($break-min:425px, $break-max:767px){
+            // border: green 1px solid;
+            height: 199px;
+
+            @include Breakpoint.breakpoint-Mobile($break-min:600px, $break-max:767px){
+                height: 220px;
+            }
+        }
+
+        
     }
  
+}
+
+@mixin description{
+
+    
+    @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:767px){
+        // border: green 1px solid;
+        width: 100%;
+        font-size:12px;
+        padding-top: 15px;
+        border:none;
+        background-color: transparent;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+
+        top:-25px;
+
+        @include Breakpoint.breakpoint-Mobile($break-min:600px, $break-max:767px){
+            font-size:16px;
+            padding-bottom: 20px;
+        }
+        @include Breakpoint.breakpoint-Mobile($break-min:425px, $break-max:599px){
+            font-size:14px;
+        }
+    }
+
 }
 
 

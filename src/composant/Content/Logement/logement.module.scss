@@ -97,7 +97,10 @@
     display: flex;
     flex-direction: row;
     position: relative;
-    bottom:100px;
+    top:-80px;
+
+
+
 
     @include mixin_Logement.DivCollapse;
 
@@ -109,13 +112,16 @@
     width: 90%;
     position: relative;
     float: left;
+
    
         .Descri{
             // border:1px solid green;
             width: 95%;
             display: flex;
             float:left;
+            @include mixin_Logement.Descri;
         }
+
     @include mixin_Logement.DivCollapse1;
 }
 
@@ -130,7 +136,9 @@
             // border: 1px solid red;
             width: 95%;
             display: flex;
-            float:right;    
+            float:right; 
+            
+            @include mixin_Logement.Equip;   
         }
     @include mixin_Logement.DivCollapse2;
 }

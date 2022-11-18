@@ -58,10 +58,10 @@
     @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:767px){
         display: flex;
         width: 100%;
-        height: 111px;
+        height: 30%;
         @include Breakpoint.breakpoint-Mobile($break-min:500px, $break-max:767px){
             border:1px solid blue;
-            height: 150px ;
+
         }
     }
     
@@ -70,7 +70,7 @@
 @mixin titre{
     @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:767px){
         // border: 1px solid blue;
-        width: 55%;
+        width: 54%;
         display: flex;
         font-size:24px; 
         text-align: left;
@@ -82,9 +82,7 @@
    
 }
 
-// @mixin img{
-//     display: none;
-// }
+
 
 
 

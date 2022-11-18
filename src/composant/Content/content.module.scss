@@ -1,50 +1,44 @@
-
 @use '../../assets/styles/Mixin/mixin_Content';
 @use '../../assets/styles/Mixin/mixin_Logement';
 
 
 .content {
     width: 100%;
-    height: auto;
+    height: 100%;
     padding: 20px;
     padding-left: 100px;
     padding-right: 100px;
-    margin-bottom : 30px;
     flex : fill;
 
     @include mixin_Content.content-Margin-Body;
-   
-
  
-    .imgHeader{
-        // border: 1px solid blue;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        .imgHeader{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-    }
-    .HeaderDesk{
-        // border:1px solid red;
-        display: flex;
-        align-self: center;
-        justify-items: center;
-        @include mixin_Content.HeaderDesk;
-    }
+        }
 
-    .HeaderMob{
-        display: none;
-        @include mixin_Content.HeaderMob;
-        
-    }
+        .HeaderDesk{
+            display: flex;
+            align-self: center;
+            justify-items: center;
+            @include mixin_Content.HeaderDesk;
+        }
 
-    .titre {
-        font-size: 48px;
-        font-weight: 500;
-        color: var(--ColorTexteTitre);
-        position: absolute;
-        text-align: center;
-        @include mixin_Content.titre;
-    }
+        .HeaderMob{
+            display: none;
+            @include mixin_Content.HeaderMob;
+        }
+
+        .titre {
+            font-size: 4rem;
+            font-weight: 500;
+            color: var(--ColorTexteTitre);
+            position: absolute;
+            text-align: center;
+            @include mixin_Content.titre;
+        }
 
 }

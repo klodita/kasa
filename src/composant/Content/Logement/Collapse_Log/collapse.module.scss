@@ -7,11 +7,8 @@
     display: flex;
     flex-direction: column;
     position: relative;
-
-   
     
     .collapseClose{
-        
         display: flex;
         align-items: center;
         text-align:left;
@@ -25,7 +22,6 @@
         border-radius: 10px;
         position: relative;
         z-index : 1;
-        // border:1px solid rgb(6, 34, 190);
     }
 
     .titreh2{
@@ -43,6 +39,7 @@
         position: relative;
         top :1px;
         z-index:1
+
     }
 
     .fa_solid{
@@ -55,7 +52,6 @@
         color : var(--ColorTexteTitre);
         background-color: var(--primaryColor);
         z-index : 2;
-        @include mixin_CollapseLog.fa_solid;
     }
 
     @include mixin_CollapseLog.divCollapse;
@@ -92,27 +88,25 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    align-items: center;
     padding: 20px;
     padding-top: 20px;
-    padding-bottom: 50px;
     margin-top: -20px;
-    margin-bottom: 130px;
-    min-height: 110px;
+    margin-block-end: 20%;
+    writing-mode: horizontal-tb;
     color: var(--primaryColor);
     position: relative;
     top:13px;
-     
+      @include mixin_CollapseLog.annonces;
 
         .description {
             // border:1px solid green;
             width:100%;
             display: flex;
             padding: 20px;
-            padding-top: 40px;
-            padding-bottom: 20px;
+            padding-top: 25px;
             margin-top: 30px;
             font-size: 20px;
+            vertical-align: middle;
             border:var(--Border-Collapse-Loge);
             background-color: var(--collapseOpenColor);
             border-bottom-left-radius: 15px;
@@ -120,10 +114,12 @@
             position: absolute;
             top:-30px;
             right:0;
+
+            @include mixin_CollapseLog.description;
         }
  
        
 }
 
-  @include mixin_CollapseLog.annonces;  
+   
    

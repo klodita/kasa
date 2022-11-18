@@ -20,9 +20,21 @@
             .titre{
                 font-size: 18px;
                 margin-bottom: 2%;
+                @include Breakpoint.breakpoint-Mobile($break-min:600px, $break-max:767px){
+                    font-size: 22px;
+                }
+                @include Breakpoint.breakpoint-Mobile($break-min:425px, $break-max:599px){
+                    font-size: 20px;
+                }
             }
             .sousTitre{
                 font-size: 14px;
+                @include Breakpoint.breakpoint-Mobile($break-min:600px, $break-max:767px){
+                    font-size: 20px;
+                }
+                @include Breakpoint.breakpoint-Mobile($break-min:425px, $break-max:599px){
+                    font-size: 18px;
+                }
             }
         }
 
@@ -43,35 +55,63 @@
             margin-top:10px;
             margin-bottom: 20px;
             top:0px;
-            @include Breakpoint.breakpoint-Mobile($break-min:713px, $break-max:767px){
-                border: 1px solid blue;
-                height: 72px;
-                margin-top: 20px;
-            }
-            
 
              .presentation2{
+                // border:1px solid blue;
                 width: 30%;
                 height: 33px;
                 flex-direction: column;
                 right : 0px;
-                @include Breakpoint.breakpoint-Mobile($break-min:713px, $break-max:767px){
-                    border:1px solid green;
-                    width: 28%;
-                    height: 64px;
+                
+              
+                @include Breakpoint.breakpoint-Mobile($break-min:398px, $break-max:767px){
+                    width: 31%;
+                    height: 43px;
+
+                    @include Breakpoint.breakpoint-Mobile($break-min:600px, $break-max:767px){
+                        width: 25%;
+                        height: 46px;
+                    }
+                    @include Breakpoint.breakpoint-Mobile($break-min:400px, $break-max:430px){
+                        width: 32%;
+                    }
                 }
+                @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:356px){
+                    width: 35%;
+                
+                }
+                
          
                 .hostName{
                     width: 30%;
                     font-size: 12px;
-                    left:5px;
-                    @include Breakpoint.breakpoint-Mobile($break-min:713px, $break-max:767px){
-                        border:1px solid blue;
-                        width: 35%;
-                        font-size: 18px;
-                        left:20%;
+                    left:10%;
+                  
+                    @include Breakpoint.breakpoint-Mobile($break-min:398px, $break-max:767px){
+                        font-size: 14px;
+                        left:12%;
+                    
+                        @include Breakpoint.breakpoint-Mobile($break-min:600px, $break-max:767px){
+                            font-size: 16px;
+                            left:12%
+                        }
+                        @include Breakpoint.breakpoint-Mobile($break-min:501px, $break-max:599px){
+                            font-size: 15px;
+                            left:20%
+                        }
+                        @include Breakpoint.breakpoint-Mobile($break-min:480px, $break-max:500px){
+                            left:15%
+                        }
+                        @include Breakpoint.breakpoint-Mobile($break-min:400px, $break-max:430px){
+                            left:0%
+                        }
+                    }
+                    @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:340px){
+                        left:5%;
                     
                     }
+                    
+                   
                  
                 }
                 .host{
@@ -79,26 +119,46 @@
                     height: 32px;
                     float:right;
                     margin-left: 65%;
-                    @include Breakpoint.breakpoint-Mobile($break-min:713px, $break-max:767px){
-                        border: 1px solid red;
-                        width: 62px;
-                        height: 62px;
+
+                    @include Breakpoint.breakpoint-Mobile($break-min:398px, $break-max:767px){
+                        width: 42px;
+                        height: 42px;
+
+                        @include Breakpoint.breakpoint-Mobile($break-min:600px, $break-max:767px){
+                            width: 45px;
+                            height: 45px;
+                            margin-left: 65%;
+                        }
+                        @include Breakpoint.breakpoint-Mobile($break-min:501px, $break-max:599px){
+                            margin-left: 71%;
+                        }
+                        @include Breakpoint.breakpoint-Mobile($break-min:480px, $break-max:500px){
+                            margin-left: 68%;
+                        }
+                        
+                    }
+                    @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:340px){
+                        margin-left: 65%;
+                    
                     }
                     
                 }
         }
 
         .DivEtoile{
+            // border:1px solid blue;
             width: 35%;
             height: 30px;
             left:0px;
             top:5px;
-            @include Breakpoint.breakpoint-Mobile($break-min:713px, $break-max:767px){
-                border: 1px solid red;
-                width: 30%;
-                top:30%;
-                // height: 30px;
+            @include Breakpoint.breakpoint-Mobile($break-min:600px, $break-max:767px){
+                width: 25%;
             }
+            @include Breakpoint.breakpoint-Mobile($break-min:400px, $break-max:599px){
+                width: 30%;
+
+            }
+
         }
 
 
@@ -114,11 +174,7 @@
     @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:767px){
        .img{
             width: 15%;
-            margin: 2px;
-            @include Breakpoint.breakpoint-Mobile($break-min:713px, $break-max:767px){
-                width: 14%;
-            }
-            
+            margin: 2px; 
        }
 
        .etoile{
@@ -134,10 +190,9 @@
         width: 100%;
         height: auto;
         top: 0px;
+        margin-block-end: 3%;
+        writing-mode: horizontal-tb;
 
-        @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:332px){
-            // border:1px solid blue;
-        }
     }
 }
 
@@ -146,7 +201,7 @@
     @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:767px){
     flex-direction: row;
     flex-grow: 1;
-    font-size: 10px;
+    font-size: 12px;
     height: 18px;
     width: 30%;
     padding-top: 5px;
@@ -156,13 +211,28 @@
     margin-top: 0;
     margin-bottom: 5px;
         
-    @include Breakpoint.breakpoint-Mobile($break-min:713px, $break-max:767px){
+    @include Breakpoint.breakpoint-Mobile($break-min:501px, $break-max:767px){
         font-size: 14px;
         padding-top: 10px;
         padding-bottom: 20px;
     }
-    @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:333px){
-        width: 68px;
+    @include Breakpoint.breakpoint-Mobile($break-min:425px, $break-max:500px){
+        width: 35%;
+        font-size: 14px;
+        padding-top: 9px;
+        padding-bottom: 20px;
+    }
+    @include Breakpoint.breakpoint-Mobile($break-min:380px, $break-max:424px){
+        width: 38%;
+        border-radius: 5px;
+    }
+   
+    @include Breakpoint.breakpoint-Mobile($break-min:300px, $break-max:379px){
+        width: 44%;
+        border-radius: 5px;
+    }
+    @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:299px){
+        width: 45%;
         border-radius: 5px;
     }
     }
@@ -176,9 +246,11 @@
 
 @mixin DivCollapse{
     @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:767px){
-        // border: 1px solid blue;
+        // border: 1px solid red;
         flex-direction: column;
-        bottom: 0px;
+        top: 0px;
+       
+       
     }
 }
 
@@ -186,26 +258,38 @@
     @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:767px){
         // border:1px solid green;
         width: 100%; 
-            .Descri{
-                width: 100%;
-               
-            }
+        margin-block-end: 25px;
+        writing-mode: horizontal-tb;     
     }
+    
+}
+
+
+@mixin Descri{
+    @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:767px){
+        width: 100%; 
+        position: relative;
+    }
+        
     
 }
 
 @mixin DivCollapse2 {
     @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:767px){
-    // border:1px solid green;
+    // border:1px solid red;
     width: 100%;
     
-    // 
-    
-        .Equip{
-            width: 100%;
-            margin-top: 30px;
-            margin-bottom: 80px;
-    }
     }
     
+}
+
+@mixin Equip {
+    @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:767px){
+        width: 100%;
+        margin-block-end: 10%;
+        writing-mode: horizontal-tb;
+
+    }
+       
+
 }

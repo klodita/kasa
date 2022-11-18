@@ -6,7 +6,8 @@ import Etoiles from './Etoiles/Etoiles'
 import CollapseLog from './Collapse_Log/Collapse'
 import { logement } from '../../../assets/API/Logement'
 import { useParams } from 'react-router-dom'
-import Slideshow from './Gallery/Content_Gallery'
+import Gallery from './Gallery/Content_Gallery'
+import Erreur from '../../../pages/Erreur'
 
 function Logement() {
   const id = useParams()
@@ -23,58 +24,64 @@ function Logement() {
   }
 
   return (
-    <main className={styles.content}>
-      <Slideshow />
-      <div className={logeStyle.Divpresentation}>
-        <div className={logeStyle.presentation1}>
-          <h1 className={logeStyle.titre}>{logementIndiv.title}</h1>
-          <h2 className={logeStyle.sousTitre}>{logementIndiv.location}</h2>
-        </div>
-      </div>
-
-      <div className={logeStyle.Divtag}>
-        <span className={logeStyle.tags}>
-          <Tag />
-        </span>
-      </div>
-
-      <div className={logeStyle.DivHostEtoile}>
-        <div className={logeStyle.presentation2}>
-          <h3 className={logeStyle.hostName}>{logementIndiv.host.name}</h3>
-          <img
-            className={logeStyle.host}
-            src={logementIndiv.host.picture}
-            alt={logementIndiv.host.name}
-          />
-        </div>
-        <div className={logeStyle.DivEtoile}>
-          <span>
-            <Etoiles />
-          </span>
-        </div>
-      </div>
-
-      <div className={logeStyle.DivCollapse}>
-        <div className={logeStyle.DivCollapse1}>
-          <div className={logeStyle.Descri}>
-            <CollapseLog
-              titre="Description"
-              description={logementIndiv.description}
-            />
+    <>
+      {logementIndiv ? (
+        <main className={styles.content}>
+          <Gallery />
+          <div className={logeStyle.Divpresentation}>
+            <div className={logeStyle.presentation1}>
+              <h1 className={logeStyle.titre}>{logementIndiv.title}</h1>
+              <h2 className={logeStyle.sousTitre}>{logementIndiv.location}</h2>
+            </div>
           </div>
-        </div>
 
-        <div className={logeStyle.DivCollapse2}>
-          <div className={logeStyle.Equip}>
-            <CollapseLog
-              titre="Equipements"
-              description={<Equipmt />}
-              className={logeStyle.ess}
-            />
+          <div className={logeStyle.Divtag}>
+            <span className={logeStyle.tags}>
+              <Tag />
+            </span>
           </div>
-        </div>
-      </div>
-    </main>
+
+          <div className={logeStyle.DivHostEtoile}>
+            <div className={logeStyle.presentation2}>
+              <h3 className={logeStyle.hostName}>{logementIndiv.host.name}</h3>
+              <img
+                className={logeStyle.host}
+                src={logementIndiv.host.picture}
+                alt={logementIndiv.host.name}
+              />
+            </div>
+            <div className={logeStyle.DivEtoile}>
+              <span>
+                <Etoiles />
+              </span>
+            </div>
+          </div>
+
+          <div className={logeStyle.DivCollapse}>
+            <div className={logeStyle.DivCollapse1}>
+              <div className={logeStyle.Descri}>
+                <CollapseLog
+                  titre="Description"
+                  description={logementIndiv.description}
+                />
+              </div>
+            </div>
+
+            <div className={logeStyle.DivCollapse2}>
+              <div className={logeStyle.Equip}>
+                <CollapseLog
+                  titre="Equipements"
+                  description={<Equipmt />}
+                  className={logeStyle.ess}
+                />
+              </div>
+            </div>
+          </div>
+        </main>
+      ) : (
+        <Erreur />
+      )}
+    </>
   )
 }
 

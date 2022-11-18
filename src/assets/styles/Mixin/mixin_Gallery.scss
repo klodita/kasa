@@ -1,23 +1,8 @@
 @use '../Breakpoint';
 
-@mixin mainHeight-Logement-Galery {
-    @include Breakpoint.breakpoint-Mobile($break-min:426px, $break-max:500px){
-        margin-top: -10px;
-    }
-    @include Breakpoint.breakpoint-Mobile($break-min:376px, $break-max:425px){
-        margin-top: -20px;
-    }
-    @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:375px){
-        margin-top: -25px;
-    }
-}
 
 @mixin picturesImg{
 
-    //Intermédiaire
-     @include Breakpoint.breakpoint($break-min:0px, $break-max:767px){
-        margin-bottom: 10px;
-     }
         //Media Queries Desktop
         @include Breakpoint.breakpoint-Desktop($break-min:992px,$break-max:1779px){
             height: 415px; 
@@ -49,42 +34,47 @@
 @mixin fleches-Gauche-Droite{
      //Intermédiaire
      @include Breakpoint.breakpoint($break-min:0px, $break-max:767px){
-        width: 24px;
-        height: 24px;
+        width: 7%;
+        height: 5%;
      }
 
     //Media queries Mobile 
     @include Breakpoint.breakpoint-Mobile($break-min:501px, $break-max:767px){
-        width: 44px;
-        height: 44px;
-        top:calc(-280px/20);
+        // width: 44px;
+        // height: 44px;
+        top:30%;
     }
-    @include Breakpoint.breakpoint-Mobile($break-min:375px, $break-max:500px){
+    @include Breakpoint.breakpoint-Mobile($break-min:426px, $break-max:500px){
+        // width: 44px;
+        // height: 44px;
+        top:25%;
+    }
+    @include Breakpoint.breakpoint-Mobile($break-min:375px, $break-max:425px){
         @include Breakpoint.breakpoint;
-        top:calc(-255px/15);
+        top:24%;
     }
     @include Breakpoint.breakpoint-mobile-max($break-max:374px){
         @include Breakpoint.breakpoint;
-        top:calc(-240px/20);
+        top:23%;
     }
 }
 
 @mixin fleche-gauche {
-     //Media queries Mobile 
-    @include Breakpoint.breakpoint-Mobile($break-min:501px, $break-max:767px){
-        left:10px;
-    }
-    @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:500px){
-        left: 5px; 
+    //  Media queries Mobile 
+    // @include Breakpoint.breakpoint-Mobile($break-min:501px, $break-max:767px){
+    //     left:10px;
+    // }
+    @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:363px){
+        left: 7%; 
     }
 }
 
 @mixin fleche-droite {
      //Media queries Mobile 
-    @include Breakpoint.breakpoint-Mobile($break-min:501px, $break-max:767px){
-        right: 10px;
-    }
-    @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:500px){
-        right: 5px; 
+    // @include Breakpoint.breakpoint-Mobile($break-min:501px, $break-max:767px){
+    //     right: 10px;
+    // }
+    @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:363px){
+        right: 7%; 
     }
 }

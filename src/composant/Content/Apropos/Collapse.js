@@ -37,14 +37,18 @@ function Collapse({ titre, description }) {
     <div className={collapse.divCollapse}>
       <div className={collapse.collapseClose}>
         <h2 className={collapse.titreh2}>{titre}</h2>
-        <a href={`#${titre}/`} onClick={() => setOpen(!open)}>
+        <a
+          className={collapse.hrefClos}
+          href={`#${titre}/`}
+          onClick={() => setOpen(!open)}
+        >
           <FlecheClose />
         </a>
       </div>
       {open && (
         <div className={collapse.annonces}>
           <a
-            className={collapse.test}
+            className={collapse.hrefOpen}
             href={`#${titre}`}
             onClick={() => setOpen(!open)}
           >

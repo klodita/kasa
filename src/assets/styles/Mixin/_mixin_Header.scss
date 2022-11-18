@@ -2,8 +2,9 @@
 @use '../Breakpoint';
 
 @mixin headerAll { 
-    
+
     @include mixin_Content.content-Margin-Body;
+
     //Media Queries Desktop
     @include Breakpoint.breakpoint-Desktop($break-min:992px,$break-max:1439px){
         height: 130px;
@@ -17,6 +18,11 @@
 
     //Media Queries Mobiles
     @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:767px){
+
+        @include Breakpoint.breakpoint-Mobile($break-min:640px, $break-max:767px){
+            height: 110px;
+            padding-top: 25px;
+        }
 
         @include Breakpoint.breakpoint-Mobile($break-min:601px, $break-max:767px){
             height: 110px;
@@ -33,6 +39,7 @@
         @include Breakpoint.breakpoint-mobile-max($break-max:375px){
             height: 90px;
             padding-top: 20px;
+         
         }   
     }
 }
@@ -41,183 +48,230 @@
 @mixin logo-Header{
     //Media Queries Mobiles
     @include Breakpoint.breakpoint-Tablette($break-min:0px, $break-max:767px){
-      
-        @include Breakpoint.breakpoint-Mobile($break-min:601px, $break-max:767px){
-            width: 195px;
-            height: 67px;
-        }
-        @include Breakpoint.breakpoint-Mobile($break-min:501px, $break-max:600px){
-            width: 175px;
-            height: 57px;
-        }
-        @include Breakpoint.breakpoint-Mobile($break-min:466px, $break-max:500px){
-            width: 165px;
-            height: 57px;
-        }
-        @include Breakpoint.breakpoint-Mobile($break-min:430px, $break-max:465px){
-            width: 150px;
-            height: 57px;
-        }
-        @include Breakpoint.breakpoint-Mobile($break-min:376px, $break-max:429px){
-            width: 140px;
-            height: 57px;
-        }
 
-        @include Breakpoint.breakpoint-mobile-max($break-max:375px){
-            width: 125px;
-            height: 49px;
+        @include Breakpoint.breakpoint-Mobile($break-min:700px, $break-max:767px){
+            width: 60%;
+            height: 78%;
         }
-        @include Breakpoint.breakpoint-mobile-max($break-max:330px){
-            width: 100px;
+        @include Breakpoint.breakpoint-Mobile($break-min:600px, $break-max:699px){
+            width: 70%;
+            height: 75%;
+        }
+        @include Breakpoint.breakpoint-Mobile($break-min:400px, $break-max:599px){
+            width: 80%;
+            height: 80%;
+        }
+        @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:399px){
+            width: 88%;
+            height: 70%;
         }
     }
 }
 
 
 @mixin navigation-Header{
-      //Media Queries Desktop
-      @include Breakpoint.breakpoint-Desktop($break-min:992px,$break-max:1779px){
 
-        @include Breakpoint.breakpoint-Desktop($break-min:1681px,$break-max:1779px){
+      //Media Queries Desktop
+      @include Breakpoint.breakpoint-desktop-min($break-min:2000px){
+        font-size: 1.6rem;
+      }
+      @include Breakpoint.breakpoint-Desktop($break-min:992px,$break-max:1919px){
+
+        
+        @include Breakpoint.breakpoint-Desktop($break-min:1800px,$break-max:1919px){
             width: 20%;
         }
-        @include Breakpoint.breakpoint-Desktop($break-min:1600px,$break-max:1680px){
+        @include Breakpoint.breakpoint-Desktop($break-min:1661px,$break-max:1799px){
             width: 22%;
         }
-        @include Breakpoint.breakpoint-Desktop($break-min:1551px,$break-max:1599px){
-            width: 40%; 
+        @include Breakpoint.breakpoint-Desktop($break-min:1581px,$break-max:1660px){
+            width: 24%;
         }
-        @include Breakpoint.breakpoint-Desktop($break-min:1025px,$break-max:1550px){
-            width: 45%;
+        @include Breakpoint.breakpoint-Desktop($break-min:1501px,$break-max:1580px){
+            width: 25%;
+        }
+        @include Breakpoint.breakpoint-Desktop($break-min:1400px,$break-max:1500px){
+            width: 28%;
+        }
+        @include Breakpoint.breakpoint-Desktop($break-min:1300px,$break-max:1399px){
+            width: 29%;
+        }
+        @include Breakpoint.breakpoint-Desktop($break-min:1238px,$break-max:1299px){
+            width: 31%;
+        }
+        @include Breakpoint.breakpoint-Desktop($break-min:1161px,$break-max:1237px){
+            width: 36.5%; 
+        }
+        @include Breakpoint.breakpoint-Desktop($break-min:1101px,$break-max:1160px){
+            width: 38%; 
+        }
+        @include Breakpoint.breakpoint-Desktop($break-min:1025px,$break-max:1100px){
+            width: 44%;
         }
         @include Breakpoint.breakpoint-Desktop($break-min:992px,$break-max:1024px){
-            width: 50%;
+            width: 46%;
         }
     }
 
     //Intermediaire Tablette et Mobile
     @include Breakpoint.breakpoint($break-min:0px, $break-max:991px){
-        top:14.5%;
         text-transform: uppercase;
     }
 
-    //Media Queries Mobiles
+    //Media Queries Tablette
     @include Breakpoint.breakpoint-Mobile($break-min:768px, $break-max:991px){
         width: 60%;
     }
 
     //Media Queries Mobiles
     @include Breakpoint.breakpoint-Tablette($break-min:0px, $break-max:767px){
-        width: 100%; 
+        width: 82%;
+        height: calc(120px/2);
         
-        @include Breakpoint.breakpoint-Mobile($break-min:601px, $break-max:767px){
-            font-size:20px;
-        }
-        @include Breakpoint.breakpoint-Mobile($break-min:501px, $break-max:600px){
-            font-size:18px;
-        }
-        @include Breakpoint.breakpoint-Mobile($break-min:466px, $break-max:500px){
-            font-size:16px;
-        }
-        @include Breakpoint.breakpoint-Mobile($break-min:430px, $break-max:465px){
-            font-size:15px;
-        }
-        @include Breakpoint.breakpoint-Mobile($break-min:376px, $break-max:429px){
-            font-size:14px;
-        }
-        @include Breakpoint.breakpoint-mobile-max($break-max:375px){
-            top:1vh;
-            padding: 0px;
-            font-size: 12px;
-            right:0px;
-        }
-
+            @include Breakpoint.breakpoint-Mobile($break-min:400px, $break-max:599px){
+                width: 80%;
+            }
+            @include Breakpoint.breakpoint-Mobile($break-min:375px, $break-max:399px){
+                width: 79%;
+            }
     }
 }
 
+
+
 @mixin accueil{
-     //Media Queries Desktop
-     @include Breakpoint.breakpoint-Desktop($break-min:992px,$break-max:1599px){
-        //Intermediaire Desktop
-        @include Breakpoint.breakpoint($break-min:1281px, $break-max:1599px){
-            width: 45%;
-        }
-        //Intermediaire Desktop
-        @include Breakpoint.breakpoint($break-min:992px, $break-max:1280px){
-            width: 55%;
-        }
 
-        @include Breakpoint.breakpoint-Desktop($break-min:1441px,$break-max:1599px){
-            left: 11vw;
-            }
-        @include Breakpoint.breakpoint-Desktop($break-min:1281px,$break-max:1440px){
-            left: 11vw;
-            }
-        @include Breakpoint.breakpoint-Desktop($break-min:1153px,$break-max:1280px){
-            left: 9vw;
-            }
-        @include Breakpoint.breakpoint-Desktop($break-min:1025px,$break-max:1152px){
-            left: 7vw;
-            }
-        @include Breakpoint.breakpoint-Desktop($break-min:992px,$break-max:1024px){
-            left: 5vw;
-            }   
-    }
-
-     //Media Queries Tablette
+    //  //Media Queries Tablette
     @include Breakpoint.breakpoint-Tablette($break-min:768px, $break-max:991px){
-        width: 75%;
-        @include Breakpoint.breakpoint-Tablette($break-min:801px, $break-max:991px){
-            left: 1vw; 
-        }
-        @include Breakpoint.breakpoint-Tablette($break-min:768px, $break-max:800px){
-            left: -3vw; 
-        }
+        width: 42%;
     }
 
-    //Media Queries Mobiles
-    @include Breakpoint.breakpoint-Tablette($break-min:0px, $break-max:767px){
+    // //Media Queries Mobiles
+    @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:767px){
 
-        @include Breakpoint.breakpoint-Mobile($break-min:601px, $break-max:767px){
-            left: 6vw;
+        @include Breakpoint.breakpoint-Mobile($break-min:650px, $break-max:767px){
+        width: 33%;
+        font-size:1.2rem;
         }
-        @include Breakpoint.breakpoint-Mobile($break-min:501px, $break-max:600px){
-            width: 70%;
-            left: 6vw;
+        @include Breakpoint.breakpoint-Mobile($break-min:580px, $break-max:649px){
+        width: 35%;
+        font-size:1.2rem;
         }
-        @include Breakpoint.breakpoint-Mobile($break-min:466px, $break-max:500px){
-            width: 70%;
-            left: 8vw;
+        @include Breakpoint.breakpoint-Mobile($break-min:500px, $break-max:579px){
+        width: 40%;
+        font-size:1.2rem;
         }
-        @include Breakpoint.breakpoint-Mobile($break-min:430px, $break-max:465px){
-            width: 70%;
-            left: 4vw;
+        @include Breakpoint.breakpoint-Mobile($break-min:431px, $break-max:499px){
+        width: 42%;
+        font-size:1.1rem;
+         }
+        @include Breakpoint.breakpoint-Mobile($break-min:400px, $break-max:430px){
+        width: 39%;
+        font-size:1rem;
         }
-        @include Breakpoint.breakpoint-Mobile($break-min:376px, $break-max:429px){
-            width: 70%;
-            left: 2vw;
+        @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:399px){
+            width: 39%;
+            font-size:0.8rem;
         }
-        @include Breakpoint.breakpoint-mobile-max($break-max:375px){
-            width: 70%;
-            left: 5vw;
-        }
-        @include Breakpoint.breakpoint-mobile-max($break-max:330px){
-            width: 70%;
-            left: 0vw;
+        @include Breakpoint.breakpoint-Tablette($break-min:279px, $break-max:296px){
+            width: 46%;
+            font-size:0.75rem;
         }
     }
 }
 
 @mixin apropos {
-    //Media Queries Desktop
-    @include Breakpoint.breakpoint-Desktop($break-min:992px,$break-max:1024px){
-        width: 75%;
-        left: 35px;        
+    
+    // Media Queries Tablette
+    @include Breakpoint.breakpoint-Tablette($break-min:768px, $break-max:991px){
+
+        
+        @include Breakpoint.breakpoint-Tablette($break-min:945px, $break-max:991px){
+            width: 36%;  
+        }
+        @include Breakpoint.breakpoint-Tablette($break-min:892px, $break-max:944px){
+            width: 39%;  
+        }
+        @include Breakpoint.breakpoint-Tablette($break-min:880px, $break-max:891px){
+            width: 39%;  
+        }
+        @include Breakpoint.breakpoint-Tablette($break-min:868px, $break-max:879px){
+            width: 40%;  
+        }
+
+        @include Breakpoint.breakpoint-Tablette($break-min:792px, $break-max:867px){
+            width: 44%;  
+        }
+        
+        @include Breakpoint.breakpoint-Tablette($break-min:768px, $break-max:791px){
+            width: 46%;  
+        }
     }
 
     //Media Queries Mobiles
-    @include Breakpoint.breakpoint-Tablette($break-min:0px, $break-max:767px){
-        width: 100%;
-        padding-right: 0;
+    @include Breakpoint.breakpoint-Mobile($break-min:711px, $break-max:767px){
+        width: 34%;
+        font-size:1.25rem;
+        }
+    @include Breakpoint.breakpoint-Mobile($break-min:667px, $break-max:710px){
+        width: 36%;
+        font-size:1.25rem;
+        }
+    @include Breakpoint.breakpoint-Mobile($break-min:640px, $break-max:666px){
+        width: 37%;
+        font-size:1.2rem;
+        }
+    @include Breakpoint.breakpoint-Mobile($break-min:601px, $break-max:639px){
+        width: 39%;
+            font-size:1.2rem;
+        }
+    @include Breakpoint.breakpoint-Mobile($break-min:595px, $break-max:600px){
+        width: 38%;
+        font-size:1.2rem;
+        }
+    @include Breakpoint.breakpoint-Mobile($break-min:568px, $break-max:594px){
+        width: 40%;
+        font-size:1.2rem;
+        }
+    @include Breakpoint.breakpoint-Mobile($break-min:540px, $break-max:567px){
+        width: 43%;
+        font-size:1.2rem;
     }
+    @include Breakpoint.breakpoint-Mobile($break-min:472px, $break-max:539px){
+        width: 44%;
+        font-size:1.1rem;
+    }
+    @include Breakpoint.breakpoint-Mobile($break-min:416px, $break-max:471px){
+        width: 47%;
+        font-size:1rem;
+    }
+    @include Breakpoint.breakpoint-Mobile($break-min:401px, $break-max:415px){
+        width: 48%;
+        font-size:1rem;
+    }
+    @include Breakpoint.breakpoint-Tablette($break-min:359px, $break-max:400px){
+        width: 42%;
+        font-size:0.8rem;
+    }
+    @include Breakpoint.breakpoint-Tablette($break-min:359px, $break-max:367px){
+        width: 44%;
+        font-size:0.8rem;
+    }
+    @include Breakpoint.breakpoint-Tablette($break-min:334px, $break-max:358px){
+        width: 44%;
+        font-size:12px;
+    }
+    @include Breakpoint.breakpoint-Tablette($break-min:320px, $break-max:333px){
+        width: 46%;
+        font-size:12px;
+    }
+    @include Breakpoint.breakpoint-Tablette($break-min:297px, $break-max:319px){
+        width: 50%;
+        font-size:0.75rem; 
+    }
+    @include Breakpoint.breakpoint-Tablette($break-min:279px, $break-max:296px){
+        width: 48%;
+        font-size:0.7rem;
+    }
+    
 }

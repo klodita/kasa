@@ -1,0 +1,80 @@
+@use '../Breakpoint';
+
+@mixin footer{
+      // Media Queries Mobile
+      @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:767px){
+            height: 185px;
+        
+
+        @include Breakpoint.breakpoint-Mobile($break-min:600px, $break-max:797px){
+            height: 220px;
+        }
+     }
+}
+
+
+@mixin img{
+    
+    // Media Queries Desktop
+    @include Breakpoint.breakpoint-Desktop($break-min:1600px, $break-max:1899px){
+        width: 9%;
+    }
+    @include Breakpoint.breakpoint-Desktop($break-min:1025px, $break-max:1599px){
+        width: 10%;
+    }
+    @include Breakpoint.breakpoint-Desktop($break-min:992px, $break-max:1024px){
+        width: 13%;
+    }
+
+
+    // Media Queries Tablette
+    @include Breakpoint.breakpoint-Tablette($break-min:768px, $break-max:991px){
+        width:15% ;
+    }
+
+
+    // Media Queries Mobile
+    @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:767px){
+       width: 25%;
+
+        @include Breakpoint.breakpoint-Mobile($break-min:600px, $break-max:797px){
+            width: 20%;
+        }
+    }
+}
+
+
+@mixin paratext{
+
+    // Media Queries Desktop
+    @include Breakpoint.breakpoint-Desktop($break-min:1025px, $break-max:1919px){
+        font-size: 1.5rem;
+    }
+    @include Breakpoint.breakpoint-Desktop($break-min:992px, $break-max:1024px){
+        font-size: 1.3rem; 
+    }
+
+    // Media Queries Tablette
+    @include Breakpoint.breakpoint-Tablette($break-min:768px, $break-max:991px){
+        font-size: 1.2rem; 
+        padding-top: 10px;
+    }
+    
+
+    // Media Queries Mobile
+    @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:767px){
+        font-size: 1rem; 
+        padding-top: 10px;
+        bottom:-10px;
+
+        @include Breakpoint.breakpoint-Mobile($break-min:600px, $break-max:797px){
+            font-size: 1.4rem;
+            bottom:-20%;
+        }
+
+        @include Breakpoint.breakpoint-Mobile($break-min:500px, $break-max:599px){
+            font-size: 1.3rem;
+            bottom:-15%;
+        }
+    }
+}

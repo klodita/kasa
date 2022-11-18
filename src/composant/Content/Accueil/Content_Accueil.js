@@ -37,7 +37,7 @@ function Content() {
       <div className={cart.location}>
         <div className={cart.cartLocation}>
           {location.map((l) => (
-            <NavLink key={l.id} to={'/logement/' + l.id + '/'}>
+            <NavLink key={l.id} to={'/logement/' + l.id}>
               <Logement image={l.cover} titre={l.title} key={l.id} />
             </NavLink>
           ))}
