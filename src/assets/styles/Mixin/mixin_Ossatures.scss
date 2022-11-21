@@ -1,0 +1,53 @@
+@use '../Breakpoint';
+
+@mixin Ossatures-Height{
+    
+    // //Media Queries Mobile et Tablette Height gestion...
+    @include Breakpoint.breakpoint-height($break-min:400px, $break-max:2560px){
+
+        @include Breakpoint.breakpoint-Mobile($break-min:2560px,$break-max:2560px){
+            min-height: 68vh;
+        }
+        @include Breakpoint.breakpoint-Mobile($break-min:2048px,$break-max:2048px){
+            min-height: 70vh;
+        }
+        @include Breakpoint.breakpoint-Mobile($break-min:1920px,$break-max:1920px){
+            min-height: 68vh;
+        } 
+        @include Breakpoint.breakpoint-Mobile($break-min:1728px,$break-max:1728px){
+            min-height: 70vh;
+        }
+        // @include Breakpoint.breakpoint-Mobile($break-min:1080px,$break-max:1080px){
+        //     min-height: 83vh;
+        // }
+        @include Breakpoint.breakpoint-Mobile($break-min:1024px,$break-max:1024px){
+            min-height: 75vh;
+        }
+        @include Breakpoint.breakpoint-Mobile($break-min:960px,$break-max:960px){
+            min-height: 75vh;       
+        }
+        @include Breakpoint.breakpoint-Mobile($break-min:912px,$break-max:912px){
+            min-height: 72vh;       
+        }
+        @include Breakpoint.breakpoint-Mobile($break-min:820px,$break-max:820px){
+            min-height: 72vh;
+        }
+        @include Breakpoint.breakpoint-Mobile($break-min:800px,$break-max:800px){
+            min-height: 78vh;
+        }
+        @include Breakpoint.breakpoint-Mobile($break-min:768px,$break-max:768px){
+            min-height: 68vh;
+        }
+        @include Breakpoint.breakpoint-Mobile($break-min:712px,$break-max:712px){
+            min-height: 73vh;
+        }
+        @include Breakpoint.breakpoint-Mobile($break-min:600px,$break-max:600px){
+            min-height: 80vh;
+        }
+        @include Breakpoint.breakpoint-Mobile($break-min:410px,$break-max:414px){
+            min-height: 75vh;
+        }
+                
+    }
+}
+      

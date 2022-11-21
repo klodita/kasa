@@ -1,6 +1,5 @@
 import styles from '../../../composant/Content/content.module.scss'
 import logeStyle from './logement.module.scss'
-// import collapseStyle from './Collapse_Log/collapse.module.scss'
 import Tag from './Tag/Tag'
 import Etoiles from './Etoiles/Etoiles'
 import CollapseLog from './Collapse_Log/Collapse'

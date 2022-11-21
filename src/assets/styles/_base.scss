@@ -1,19 +1,17 @@
 *, *::before, ::after
-{
+{  
     box-sizing:border-box;
     margin:0;
     padding:0;
     width: 100%;
-  
+    
 }
 
+html,
 body {
-    margin :0;
-    padding :0;
+
     width: 100%;
     font-family: var(--font-familly);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     color : var(--primaryColor);
     background-color: white;
 

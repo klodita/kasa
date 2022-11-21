@@ -1,9 +1,10 @@
 import React from 'react'
 import Router from './Routes/Router'
+import styles from './App.module.scss'
 
 function App() {
   return (
-    <div>
+    <div className={styles.appContainer}>
       <Router />
     </div>
   )

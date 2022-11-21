@@ -1,14 +1,14 @@
 @use '../../assets/styles/Mixin/mixin_Content';
-@use '../../assets/styles/Mixin/mixin_Logement';
+
 
 
 .content {
+
     width: 100%;
-    height: 100%;
     padding: 20px;
     padding-left: 100px;
     padding-right: 100px;
-    flex : fill;
+    position:relative;
 
     @include mixin_Content.content-Margin-Body;
  
@@ -17,13 +17,15 @@
             display: flex;
             align-items: center;
             justify-content: center;
-
+            margin-top:-20px;
+            @include mixin_Content.imgHeader;
         }
 
         .HeaderDesk{
             display: flex;
             align-self: center;
             justify-items: center;
+            object-fit: cover;
             @include mixin_Content.HeaderDesk;
         }
 
@@ -31,6 +33,8 @@
             display: none;
             @include mixin_Content.HeaderMob;
         }
+
+        
 
         .titre {
             font-size: 4rem;
@@ -42,3 +46,4 @@
         }
 
 }
+

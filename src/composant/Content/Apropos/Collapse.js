@@ -34,7 +34,7 @@ function Collapse({ titre, description }) {
   }
 
   return (
-    <div className={collapse.divCollapse}>
+    <section className={collapse.divCollapse}>
       <div className={collapse.collapseClose}>
         <h2 className={collapse.titreh2}>{titre}</h2>
         <a
@@ -57,7 +57,7 @@ function Collapse({ titre, description }) {
           <div className={collapse.description}>{description}</div>
         </div>
       )}
-    </div>
+    </section>
   )
 }
 

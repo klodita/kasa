@@ -1,4 +1,4 @@
-@use '../../../assets/styles/Mixin/mixin_Cart.scss' ; 
+@use '../../../assets/styles/Mixin/mixin_Accueil.scss' ; 
   
 .location {
     width: 100%;
@@ -9,7 +9,7 @@
     padding-bottom: 30px;
     background-color: var(--collapseOpenColor);
     border-radius: 40px 30px;
-        @include mixin_Cart.Location;
+        @include mixin_Accueil.Location;
 
         .cartLocation{
             display: grid;
@@ -17,7 +17,7 @@
             grid-auto-columns: repeat(3,510px);
             grid-gap:35px;
             padding-bottom: 50px;
-                @include mixin_Cart.cartLocation;
+                @include mixin_Accueil.cartLocation;
           
             .cart {
                 width: 100%;
@@ -28,7 +28,7 @@
                 &:hover{
                     cursor: pointer;
                 }
-                @include mixin_Cart.Cart;
+                @include mixin_Accueil.Cart;
             }
 
             .cover{
@@ -36,7 +36,7 @@
                 height: 481px;
                 object-fit: cover;
                 border-radius: 20px;
-                @include mixin_Cart.Cover;
+                @include mixin_Accueil.Cover;
             }
 
             .flou{
@@ -64,7 +64,7 @@
                         z-index:1;   
                     }
 
-                @include mixin_Cart.Flou;
+                @include mixin_Accueil.Flou;
             }
             
         }

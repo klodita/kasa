@@ -1,11 +1,10 @@
 @use '../../../../assets/styles/Mixin/mixin_Logement';
 
 .img{
-    // border: 1px solid blue;
     width: 36px;
     display: flex;
     margin:5px;
-
+        @include mixin_Logement.imgEtoile-Tab-Desk;
    
 }
 
@@ -14,6 +13,7 @@
     display: flex;
     position: absolute;
     left: 30px;
+        @include mixin_Logement.etoile-Tab-Desk;
 }
 
 @include mixin_Logement.etoileImg;

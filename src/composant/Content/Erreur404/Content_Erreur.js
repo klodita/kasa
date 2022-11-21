@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 function ContentErreur() {
   return (
     <main className={styles.content}>
-      <section className={erreur.divErreur}>
+      <div className={erreur.divErreur}>
         <img src={image} alt="erreur 404" className={erreur.erreur} />
         <div className={erreur.titreErreur}>
           <h1> Oups! La page que vous demandez n'existe pas. </h1>
@@ -14,7 +14,7 @@ function ContentErreur() {
             <h2 className={erreur.titreh1}>Retourner sur la page d’accueil</h2>
           </Link>
         </div>
-      </section>
+      </div>
     </main>
   )
 }

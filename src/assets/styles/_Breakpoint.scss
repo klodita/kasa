@@ -62,3 +62,10 @@
         @content;
     }
 }
+
+// Intermédiaire Height-devices
+@mixin breakpoint-height($break-min:0, $break-max:0){
+    @media (min-height:$break-min) and (max-height: $break-max){
+        @content;
+    }
+}

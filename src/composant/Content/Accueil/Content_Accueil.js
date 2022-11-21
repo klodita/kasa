@@ -1,5 +1,5 @@
 import styles from '../../../composant/Content/content.module.scss'
-import cart from './cart.module.scss'
+import cart from './accueil.module.scss'
 import image from '../../../assets/images/header_AccueilDeskop.png'
 import img from '../../../assets/images/header_AccueilMobile.png'
 import { NavLink } from 'react-router-dom'

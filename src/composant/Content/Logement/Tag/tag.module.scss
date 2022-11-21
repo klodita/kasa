@@ -17,4 +17,5 @@
     background-color: var(--primaryColor);
     
         @include mixin_Logement.tag;
+        @include mixin_Logement.tag-Tab-Desk;
 }

@@ -3,78 +3,142 @@
 
 @mixin picturesImg{
 
-        //Media Queries Desktop
-        @include Breakpoint.breakpoint-Desktop($break-min:992px,$break-max:1779px){
-            height: 415px; 
-        }
+    //Media Queries Desktop
+    @include Breakpoint.breakpoint-Desktop($break-min:992px,$break-max:1779px){
+        height: 415px; 
+        margin-bottom: -10px;
+    }
         
-        //Media Queries Mobiles
-        @include Breakpoint.breakpoint-Tablette($break-min:0px, $break-max:767px){
+    // Media Queries Tablette
+    @include Breakpoint.breakpoint-Tablette($break-min:768px, $break-max:991px){
+        height: 315px;
+        margin-bottom: -50px;
+        top:0;
+    }
+        
+    //Media Queries Mobiles
+    @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:767px){
           
-            @include Breakpoint.breakpoint-Mobile($break-min:501px, $break-max:767px){
-                height: 280px;
-            }
-            @include Breakpoint.breakpoint-Mobile($break-min:375px, $break-max:500px){
-               height: 255px;
-            }
-            @include Breakpoint.breakpoint-mobile-max($break-max:374px){
-                height: 240px;
-                top:-20px;
-            }
+        @include Breakpoint.breakpoint-Mobile($break-min:501px, $break-max:767px){
+            height: 280px;
         }
+        @include Breakpoint.breakpoint-Mobile($break-min:375px, $break-max:500px){
+            height: 255px;
+        }
+        @include Breakpoint.breakpoint-mobile-max($break-max:374px){
+            height: 240px;
+        }
+    }
 }
 
 @mixin pictures{
 
+    // Media Queries Desktop
+    @include Breakpoint.breakpoint-Desktop($break-min:992px,$break-max:1779px){
+        height: 415px;
+    }
+
+    // Media Queries Mobile
     @include Breakpoint.breakpoint($break-min:0px, $break-max:767px){
        border-radius: 10px;
     }
 }
 
 @mixin fleches-Gauche-Droite{
-     //Intermédiaire
-     @include Breakpoint.breakpoint($break-min:0px, $break-max:767px){
-        width: 7%;
-        height: 5%;
-     }
+
+    // Media Queries Desktop
+    @include Breakpoint.breakpoint-Desktop($break-min:992px,$break-max:1779px){
+        width: 9%;
+        position: absolute;
+        top:135px;
+
+        @include Breakpoint.breakpoint-Desktop($break-min:1200px,$break-max:1779px){
+            width: 8%;
+        }
+    }
+
+    // Media Queries Tablette
+    @include Breakpoint.breakpoint-Tablette($break-min:768px, $break-max:991px){
+        width: 8%;
+        position: absolute;
+        top:calc(415px/4)
+    }
 
     //Media queries Mobile 
+    @include Breakpoint.breakpoint($break-min:0px, $break-max:767px){
+        width: 7%;
+        height: 5%;
+    }
     @include Breakpoint.breakpoint-Mobile($break-min:501px, $break-max:767px){
-        // width: 44px;
-        // height: 44px;
-        top:30%;
+        top:226px;
     }
     @include Breakpoint.breakpoint-Mobile($break-min:426px, $break-max:500px){
-        // width: 44px;
-        // height: 44px;
         top:25%;
     }
-    @include Breakpoint.breakpoint-Mobile($break-min:375px, $break-max:425px){
-        @include Breakpoint.breakpoint;
-        top:24%;
+    @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:500px){
+        top:111px;
     }
-    @include Breakpoint.breakpoint-mobile-max($break-max:374px){
-        @include Breakpoint.breakpoint;
-        top:23%;
-    }
+    
 }
 
 @mixin fleche-gauche {
-    //  Media queries Mobile 
-    // @include Breakpoint.breakpoint-Mobile($break-min:501px, $break-max:767px){
-    //     left:10px;
-    // }
+
+    // Media Queries Desktop
+    @include Breakpoint.breakpoint-Desktop($break-min:992px,$break-max:1779px){
+        left:7.4%;
+    }
+
+    // Media Queries Tablette
+    @include Breakpoint.breakpoint-Tablette($break-min:768px, $break-max:991px){
+        left:6.5%;
+    }
     @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:363px){
         left: 7%; 
     }
 }
 
 @mixin fleche-droite {
-     //Media queries Mobile 
-    // @include Breakpoint.breakpoint-Mobile($break-min:501px, $break-max:767px){
-    //     right: 10px;
-    // }
+
+    // Media Queries Desktop
+    @include Breakpoint.breakpoint-Desktop($break-min:992px,$break-max:1779px){
+        right:7.4%;
+    }
+
+    // Media Queries Tablette
+    @include Breakpoint.breakpoint-Tablette($break-min:768px, $break-max:991px){
+        right:6.5%;
+    }
     @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:363px){
         right: 7%; 
     }
+}
+
+@mixin numero{
+
+    // Media Queries Desktop
+    @include Breakpoint.breakpoint-Desktop($break-min:1780px,$break-max:1919px){
+        bottom:156px;
+    }
+    @include Breakpoint.breakpoint-Desktop($break-min:992px,$break-max:1779px){
+        width: 86%;
+        bottom:384px;
+        position: absolute;
+    }
+
+    //Media Queries Tablette
+    @include Breakpoint.breakpoint-Tablette($break-min:768px,$break-max:991px){
+        width: 100%;
+        height: 10%;
+        font-size: 1.3rem;
+        display: flex;
+        position: relative;
+        bottom:5px;
+        align-content:flex-start;
+    }
+
+    //Media Queries Mobile
+    @include Breakpoint.breakpoint-Mobile($break-min:0px,$break-max:767px){
+        display: none;
+    }
+
 }

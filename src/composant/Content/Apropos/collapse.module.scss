@@ -1,3 +1,53 @@
+@use '../../../assets/styles/Mixin/mixin_CollapseApros.scss';
+@use '../../../assets/styles/Mixin/mixin_Content';
+
+
+.content {
+    width: 100%;
+    padding: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+        
+        @include mixin_Content.content-Margin-Body;
+       
+    .imgHeader{
+           
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+            @include mixin_Content.imgHeader;
+        }
+    
+    .imgDesk{
+         
+        display: flex;
+        align-self: center;
+        justify-items: center;
+        object-fit: cover;
+            @include mixin_Content.imgDesk;
+    }
+    
+    .imgMob{
+        display: none;
+            @include mixin_Content.imgMob;
+    }
+}
+    
+.modMobile{
+    display: flex;
+    flex-direction: column;
+    margin-block-start: 2%;
+    writing-mode: horizontal-tb;
+    margin-block-end: 2%;
+    writing-mode: horizontal-tb;
+    position: relative;
+    bottom:0;
+        @include mixin_CollapseApros.modMobile;
+    
+} 
+    
 .divCollapse {
     width: 100%;
     display: flex;
@@ -9,10 +59,10 @@
     writing-mode: horizontal-tb;
     margin-block-end: 1%;
     writing-mode: horizontal-tb;
-
-    
-    .collapseClose{
+  
         
+    .collapseClose{
+            
         display: flex;
         align-items: center;
         text-align:left;
@@ -26,17 +76,17 @@
         background-color: var(--primaryColor);
         border-radius: 10px;
         position: relative;
-        bottom:-15px;
+        bottom:0px;
         z-index : 1;
-
+            @include mixin_CollapseApros.collapseClose;
+    
         .hrefClos{
-            // border:1px solid blue;
             width: 100%;
             height: 35px;
             display:flex;
             position: relative;
             bottom :0;
-    
+        
             .fa_solid{
                 width: 2.5%;
                 display: flex;
@@ -47,81 +97,78 @@
                 background-color: var(--primaryColor);
                 z-index : 2;
                 position: absolute;
-          
+                    @include mixin_CollapseApros.fleche;
+                    @include mixin_CollapseApros.fa_solid;
             }
-    
+        
         }
     }
+
     .titreh2{
         width: 10%;
-        font-size: 24px;
+        font-size: 1.5rem;
         display: flex;
         float: left;
         position: absolute;
+            @include mixin_CollapseApros.titreh2;
     }
-
-  
-
-    
 }
-    
-   
-
-    .hrefOpen{
-        // border:1px solid green;
-        width: 100%;
-        height: 35px;
-        display:flex;
-        position: relative;
-        bottom :0px;
-
-        .fatrue {
-            width: 2.5%;
-            display: flex;
-            position : absolute;
-            bottom:240%;
-            left :98%;
-            color : var(--ColorTexteTitre);
-            background-color: var(--primaryColor);
-            transform: rotate(-180deg);
-            z-index : 3;
-           
-        }
-       
-    }
-
-    .annonces {
-        // border:1px solid red;
-        height: 150px;
-        width: 80%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: 20px;
-        margin-top: -20px;
-        color: var(--primaryColor);
-        background-color: var(--collapseOpenColor);
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;
-        position: relative;
-       
 
         
+.hrefOpen{
+    width: 100%;
+    height: 35px;
+    display:flex;
+    position: relative;
+    bottom :0px;
+    
+    .fatrue {
+        width: 2.5%;
+        display: flex;
+        position : absolute;
+        bottom:280%;
+        left :98%;
+        color : var(--ColorTexteTitre);
+        background-color: var(--primaryColor);
+        transform: rotate(-180deg);
+        z-index : 3;
+            @include mixin_CollapseApros.fleche;
+            @include mixin_CollapseApros.fatrue;         
+    }       
+}
+    
+.annonces {
+    height: 150px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    margin-top: -20px;
+    color: var(--primaryColor);
+    background-color: var(--collapseOpenColor);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    position: relative;
+    bottom:5px;
+        @include mixin_CollapseApros.annonces;
+             
     .description {
-        // border:1px solid blue;
         width:100%;
         display: flex;
         padding: 20px;
         padding-top: 20px;
         padding-bottom: 20px;
-        font-size: 24px;
+        font-size: 1.5rem;
         margin-top:100px;
         margin-bottom: 150px;
         position: absolute;
         left:0;
         top:-88px;
+    
+            @include mixin_CollapseApros.description;
     }
-    }
+}
     
 
-   
+

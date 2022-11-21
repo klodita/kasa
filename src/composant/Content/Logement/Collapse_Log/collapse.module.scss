@@ -2,7 +2,6 @@
 
 
 .divCollapse {
-    // border:1px solid red;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -22,28 +21,29 @@
         border-radius: 10px;
         position: relative;
         z-index : 1;
+            @include mixin_CollapseLog.collapseClose-Tab-Desk;
+
     }
 
     .titreh2{
-        // border:1px solid rgb(68, 188, 13);
         width: 30%;
         font-size: 22px;
         display: flex;
         float: left;
+            @include mixin_CollapseLog.titreh2-Tab-Desk;
     }
 
     .hrefClose{
-        // border:1px solid blue;
         width: 100%;
         display:flex;
         position: relative;
         top :1px;
-        z-index:1
+        z-index:1;
+            @include mixin_CollapseLog.HrefClose;
 
     }
 
     .fa_solid{
-        // border:1px solid blue;
         width: 5%;
         display: flex;
         position : relative;
@@ -52,24 +52,24 @@
         color : var(--ColorTexteTitre);
         background-color: var(--primaryColor);
         z-index : 2;
+            @include mixin_CollapseLog.fleche-Tab-Desk;
+            @include mixin_CollapseLog.fa_solid-Tab-Desk;
     }
 
     @include mixin_CollapseLog.divCollapse;
 }
 
 .hrefOpen{
-    // border:1px solid blue;
     width: 100%;
     display:flex;
     position: relative;
     bottom :56px;
     z-index:1;
-
-    @include mixin_CollapseLog.hrefOpen;
+        @include mixin_CollapseLog.HrefOpen-Tab-Desk;
+        @include mixin_CollapseLog.hrefOpen;
 }
 
 .fatrue {
-    // border: 1px solid green;
     width: 4%;
     display: flex;
     position : relative;
@@ -78,9 +78,10 @@
     background-color: var(--primaryColor);
     transform: rotate(-180deg);
     z-index : 3;
-    @include mixin_CollapseLog.fatrue;
+        @include mixin_CollapseLog.fatrue;
+        @include mixin_CollapseLog.fleche-Tab-Desk;
+        @include mixin_CollapseLog.fatrue-Tab-Desk;
 }
-
 
    
 .annonces {
@@ -96,10 +97,10 @@
     color: var(--primaryColor);
     position: relative;
     top:13px;
-      @include mixin_CollapseLog.annonces;
+        @include mixin_CollapseLog.annonces;
+        @include mixin_CollapseLog.annonces-Tab-Desk;
 
         .description {
-            // border:1px solid green;
             width:100%;
             display: flex;
             padding: 20px;
@@ -114,8 +115,7 @@
             position: absolute;
             top:-30px;
             right:0;
-
-            @include mixin_CollapseLog.description;
+                @include mixin_CollapseLog.description;
         }
  
        

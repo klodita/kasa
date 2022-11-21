@@ -1,15 +1,17 @@
 @use '../../../assets/styles/Mixin/mixin_Logement';
 @use '../../../assets/styles/Breakpoint';
+@use '../../../assets/styles/Mixin/mixin_Content';
+
+
 
 .Divpresentation {
-    // border: 1px solid red;
     width: 70%;
     display: flex;
     flex-direction: row;
     margin-top : 40px;
-      
-
+ 
     .presentation1 {
+       
         .titre, .sousTitre {
             width: 70%;
         }
@@ -17,45 +19,49 @@
         .titre{
             font-size: 36px;
             margin-bottom : 15px;
+            @include mixin_Logement.titreh2-Desk;
         }
     
-        .sousTitre, .hostName{
+        .sousTitre{
             font-size: 20px;
+            font-weight: 100;
+            @include mixin_Logement.soustitre-Desk;
         }
+        
     }
-
+    @include mixin_Logement.Presentation-Tab;
    
 }
 
+
 .DivHostEtoile{
-    // border: 1px solid blue;
     width: 30%;
-    height: 147px;
+    height: 155px;
     display: flex;
     float: right;
+    right: 0;
     flex-direction: column;
     padding-left:12%;
     position: relative;
     bottom: 144px;
 
+
     .presentation2{
-        // border:1px solid red; 
         width: 60%;
-        height: 75px;
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
         align-items: center;
         position: absolute;
-      
+        
     
         .hostName{
-            // border: 1px solid green;
             width: 40%;
             font-size: 22px;
             display: flex;
             margin-right: 25%;
             position: absolute;
+                @include mixin_Logement.hostName-Desk;
         }
     
         .host{
@@ -65,85 +71,81 @@
             border-radius: 50px;
             display: flex;
             position:absolute;
+                @include mixin_Logement.hostImg-Desk;
         }
+
+        @include mixin_Logement.presentation2-Desk;
     }
     
     .DivEtoile{
-        // border:1px solid green;
         width: 50%;
         display: flex;
         height:66px;
         top:86px;
-        right:-2px;
-        // left:-625px;
         position: absolute;
-     
+        right:0;
     }
 }
 
 
 
 .Divtag{
-    // border:1px solid blue;
     width: 75%;
     display: flex;
     position: relative;
         @include mixin_Logement.Divtag;
+        @include mixin_Logement.Divtag-Tab-Desk;
 }
 
 .DivCollapse{
-    // border:1px solid blue;
     width: 100%;
     display: flex;
     flex-direction: row;
     position: relative;
     top:-80px;
-
-
-
-
-    @include mixin_Logement.DivCollapse;
-
-  
+        @include mixin_Logement.DivCollapse-Tab-Desk;
+        @include mixin_Logement.DivCollapse;
 }
 
 .DivCollapse1{
-    // border:1px solid blue;
     width: 90%;
     position: relative;
     float: left;
 
-   
         .Descri{
-            // border:1px solid green;
             width: 95%;
             display: flex;
             float:left;
-            @include mixin_Logement.Descri;
+                @include mixin_Logement.Descri;
         }
 
     @include mixin_Logement.DivCollapse1;
 }
 
 .DivCollapse2{
-    // border:1px solid red;
     width: 90%;
     padding: 0;
     position: relative;  
     right: 0px;
 
         .Equip{
-            // border: 1px solid red;
             width: 95%;
             display: flex;
             float:right; 
-            
-            @include mixin_Logement.Equip;   
+                @include mixin_Logement.Equip;  
         }
+
     @include mixin_Logement.DivCollapse2;
 }
         
 
- @include mixin_Logement.Divpresentation;
+@include mixin_Logement.Divpresentation;
 
- @include mixin_Logement.DivHostEtoile;
+@include mixin_Logement.DivHostEtoile;
+
+//MEDIA DESKTOP
+@include mixin_Logement.DivEtoile-Desk;
+
+//MEDIA TABLETTE
+@include mixin_Logement.DivHostEtoile-Tab;
+

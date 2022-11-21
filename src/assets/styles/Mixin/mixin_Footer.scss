@@ -1,17 +1,5 @@
 @use '../Breakpoint';
 
-@mixin footer{
-      // Media Queries Mobile
-      @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:767px){
-            height: 185px;
-        
-
-        @include Breakpoint.breakpoint-Mobile($break-min:600px, $break-max:797px){
-            height: 220px;
-        }
-     }
-}
-
 
 @mixin img{
     
@@ -29,18 +17,19 @@
 
     // Media Queries Tablette
     @include Breakpoint.breakpoint-Tablette($break-min:768px, $break-max:991px){
-        width:15% ;
+        width:18% ;
     }
 
 
     // Media Queries Mobile
-    @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:767px){
+    @include Breakpoint.breakpoint-Mobile($break-min:374px, $break-max:767px){
        width: 25%;
 
-        @include Breakpoint.breakpoint-Mobile($break-min:600px, $break-max:797px){
-            width: 20%;
-        }
     }
+    @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:373px){
+        width: 35%;
+ 
+     }
 }
 
 
@@ -63,17 +52,17 @@
 
     // Media Queries Mobile
     @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:767px){
-        font-size: 1rem; 
+        font-size: 13px; 
         padding-top: 10px;
         bottom:-10px;
 
-        @include Breakpoint.breakpoint-Mobile($break-min:600px, $break-max:797px){
-            font-size: 1.4rem;
+        @include Breakpoint.breakpoint-Mobile($break-min:600px, $break-max:767px){
+            font-size: 18px;
             bottom:-20%;
         }
 
         @include Breakpoint.breakpoint-Mobile($break-min:500px, $break-max:599px){
-            font-size: 1.3rem;
+            font-size: 15px;
             bottom:-15%;
         }
     }

@@ -21,18 +21,17 @@
 .numero{
     width: 89.5%;
     height: 50px;
-    font-size: 24px;
+    font-size: 1.5rem;
     color: var( --ColorTexteTitre);
     display: flex;
     flex-direction: row;
     justify-content: center;
     position: absolute;
-    bottom:26%;
+    bottom:444px;
     z-index: 2;
+    @include mixin_Gallery.numero;
 
-    @include Breakpoint.breakpoint-mobile-max($break-max:767px){
-        display: none;
-    }
+    
 }
 
 .img{
@@ -44,12 +43,13 @@
     height: 150px;
     display: flex;
     position: absolute;
-    top:calc(550px/1.5);
+    top:195px;
     z-index: 1;
         &:hover{
             cursor: pointer;
         }
         @include mixin_Gallery.fleches-Gauche-Droite;
+        
 }
 
 

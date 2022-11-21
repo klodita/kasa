@@ -1,0 +1,8 @@
+@use '../../assets/styles/Mixin/mixin_Ossatures.scss';
+
+/* Permet d'avoir une hauteur limite minimum selon les hauteur d'écran Tablette et Mobile ,
+ce travail est effectué suite à une vérification dans l'inspecteur avec les différentes appareiles 
+pour avoir une aperçue par exemple d'une tablette Nexus 7 ou un Ipad mini...*/
+main{
+    @include mixin_Ossatures.Ossatures-Height;
+}

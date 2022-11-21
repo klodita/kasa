@@ -1,15 +1,26 @@
-import styles from '../../../composant/Content/content.module.scss'
+// import styles from '../../../composant/Content/content.module.scss'
 import Collapse from './Collapse'
 import image from '../../../assets/images/header_AproposDesktop.png'
+import img from '../../../assets/images/header_AproposMobile.png'
+import styles from '../Apropos/collapse.module.scss'
 
 function ContentApropos() {
   return (
     <main className={styles.content}>
       <div className={styles.imgHeader}>
-        <img src={image} alt="Montagne enneigée" />
+        <img
+          src={image}
+          alt="Grand Montagne enneigée"
+          className={styles.imgDesk}
+        />
+        <img
+          src={img}
+          alt="Petite montagne enneigée"
+          className={styles.imgMob}
+        />
       </div>
 
-      <div>
+      <div className={styles.modMobile}>
         <Collapse
           titre="Fiabilité"
           description="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes."

@@ -1,109 +1,186 @@
 @use '../Breakpoint';
 
-@mixin divCollapse{
-    @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:767px){
-        // border: 1px solid pink;
-       
-        .collapseClose{
-            // border: 1px solid blue;
-            height: 29px;
-            padding: 10px;
-            border-radius: 5px;
 
-            @include Breakpoint.breakpoint-Mobile($break-min:425px, $break-max:767px){
-                height: 40px;
-              
-            }
-        }
 
-        .titreh2{
-            font-size: 13px;
-            @include Breakpoint.breakpoint-Mobile($break-min:425px, $break-max:767px){
-                font-size: 16px;
-                padding: 10px;
-            }
-            
-        }
-        .hrefClose{
-            // border: 1px solid green;
-            top:0;
-        }
+///////////////////////// PARTIE MEDIA TABLETTE ET DESKTOP //////////////////////////////
 
-        .fa_solid{
-            @include Breakpoint.breakpoint-Mobile($break-min:425px, $break-max:767px){
-                left:93.5%;
-                width: 6%;
-            }
-            @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:424px){
-                left:93%;
-                width: 6%;
-              
-            }
 
-        }
+@mixin collapseClose-Tab-Desk{
+    //Media Queries Tablette
+    @include Breakpoint.breakpoint-Tablette($break-min:768px, $break-max:991px){
+        height: 37px;
     }
 }
 
-@mixin hrefOpen{
-    @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:767px){
-        bottom: 50px;
+@mixin titreh2-Tab-Desk{
+
+    //Media Queries Desktop
+    @include Breakpoint.breakpoint-Tablette($break-min:992px, $break-max:1779px){
+        font-size: 1.2rem;
+    }
+
+    //Media Queries Tablette
+    @include Breakpoint.breakpoint-Tablette($break-min:768px, $break-max:991px){
+        font-size: 1.1rem;
+    }
+}
+
+
+@mixin HrefClose {
+
+    //Media Queries Desktop
+    @include Breakpoint.breakpoint-Tablette($break-min:992px, $break-max:1779px){
+        width: 100%;
+        height: 40px;
+        top:0;
+    }
+
+     //Media Queries Tablette
+     @include Breakpoint.breakpoint-Tablette($break-min:768px, $break-max:991px){
+        width: 100%;
+        height: 20px;
+        top:0;
+    }
+}
+
+@mixin HrefOpen-Tab-Desk{
+
+     //Media Queries Desktop
+     @include Breakpoint.breakpoint-Tablette($break-min:992px, $break-max:1779px){
+        width: 100%;
+        height: 45px;
+        bottom: 128%;
+    }
+
+    //Media Queries Tablette
+    @include Breakpoint.breakpoint-Tablette($break-min:768px, $break-max:991px){
+        width: 100%;
+        height: 40px;
+        bottom:150%;
+    }
+}
+
+@mixin fleche-Tab-Desk{
+    //Media Queries Desktop
+    @include Breakpoint.breakpoint-Desktop($break-min:992px, $break-max:1779px){
+       width: 27px;
+       height: 27px;
+
+        @include Breakpoint.breakpoint-Desktop($break-min:1200px, $break-max:1779px){
+            width: 29px;
+            height: 29px;
+        }
+    }
+
+    //Media Queries Tablette    
+    @include Breakpoint.breakpoint-Tablette($break-min:768px, $break-max:991px){
+       width: 25px;
+       height: 25px;
+    }
+
+}
+@mixin fa_solid-Tab-Desk{
+
+    //Media Queries Desktop
+    @include Breakpoint.breakpoint-Desktop($break-min:991px, $break-max:1779px){
+        left:94%;
+        bottom: -18%;
+
+        @include Breakpoint.breakpoint-Desktop($break-min:1200px, $break-max:1779px){
+            bottom: -15%;
+
+            @include Breakpoint.breakpoint-Desktop($break-min:1400px, $break-max:1779px){
+                left: 95%;
+            }
+        }
+    }
+
+    //Media Queries Tablette
+    @include Breakpoint.breakpoint-Tablette($break-min:768px, $break-max:991px){
+        left:92%;
     }
     
 }
 
 
-@mixin fatrue{
 
-    @include Breakpoint.breakpoint-Mobile($break-min:425px, $break-max:767px){
-        top:21px;
-        left:93%;
-        width: 5%;
+@mixin fatrue-Tab-Desk{
+
+    // Media Queries Desktop
+    @include Breakpoint.breakpoint-Desktop($break-min:991px, $break-max:1779px){
+        left: 96%;
+        bottom: -18%;
+        
+        @include Breakpoint.breakpoint-Desktop($break-min:1200px, $break-max:1779px){
+            bottom: -15%;
+
+            @include Breakpoint.breakpoint-Desktop($break-min:1400px, $break-max:1779px){
+                left: 96%;
+            }
+        }
     }
-    @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:424px){
-        // border: 1px solid orange;
-        top: 35px;
-        left:92%;
-        width: 5%;
+
+    // Media Queries Tablette
+    @include Breakpoint.breakpoint-Tablette($break-min:768px, $break-max:991px){
+        left: 94%;
+        bottom: -29%;
     }
+
 }
+
+
+@mixin annonces-Tab-Desk{
+
+    //Media Queries Tablette
+    @include Breakpoint.breakpoint-Tablette($break-min:768px, $break-max:991px){
+        margin-block-end: 70%;
+        writing-mode: horizontal-tb;
+    }
+   
+}
+
+
+
+
+///////////////////// PARTIE MOBILE TABLETTE ET DESKTOP //////////////////////////
+
+
 
 @mixin annonces{
 
+    //Media Queries Desktop
     @include Breakpoint.breakpoint-Desktop($break-min:1381px, $break-max:1919px){
-        // border: green 1px solid;
         margin-block-end: 30%;
         writing-mode: horizontal-tb;
     }
     @include Breakpoint.breakpoint-Desktop($break-min:1201px, $break-max:1380px){
-        // border: green 1px solid;
         margin-block-end: 35%;
         writing-mode: horizontal-tb;
     }
     @include Breakpoint.breakpoint-Desktop($break-min:1071px, $break-max:1200px){
-        // border: green 1px solid;
         margin-block-end: 38%;
         writing-mode: horizontal-tb;
     }
     @include Breakpoint.breakpoint-Desktop($break-min:992px, $break-max:1070px){
-        // border: green 1px solid;
         margin-block-end: 45%;
         writing-mode: horizontal-tb;
     }
     
+
+    //Media Queries Tablette
     @include Breakpoint.breakpoint-Tablette($break-min:768px, $break-max:991px){
-        // border: green 1px solid;
         margin-block-end: 55%;
         writing-mode: horizontal-tb;
 
         @include Breakpoint.breakpoint-Tablette($break-min:860px, $break-max:991px){
-            // border: green 1px solid;
             margin-block-end: 45%;
             writing-mode: horizontal-tb;
         }
     }
-
+    
+    
+    //Media Queries Mobile
     @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:767px){
-        //  border: 1px solid black;
         height: 182px;
         padding: 0;
         padding-bottom: 0;
@@ -116,24 +193,107 @@
         top:12px;
         
         @include Breakpoint.breakpoint-Mobile($break-min:425px, $break-max:767px){
-            // border: green 1px solid;
             height: 199px;
 
             @include Breakpoint.breakpoint-Mobile($break-min:600px, $break-max:767px){
                 height: 220px;
             }
         }
-
-        
     }
  
 }
 
+
+
+
+
+
+
+//////////////////// PARTIE MIXIN MEDIA MOBILE /////////////////////////////////
+
+@mixin divCollapse{
+
+    // Media Queries Tablette
+    @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:767px){
+
+        .collapseClose{
+            height: 29px;
+            padding: 10px;
+            border-radius: 5px;
+
+            @include Breakpoint.breakpoint-Mobile($break-min:425px, $break-max:767px){
+                height: 40px;
+            }
+        }
+
+        .titreh2{
+            @include Breakpoint.breakpoint-Mobile($break-min:600px, $break-max:767px){
+                font-size: 18px;
+                padding: 10px;
+            }
+            @include Breakpoint.breakpoint-Mobile($break-min:425px, $break-max:599px){
+                font-size: 16px;
+                padding: 10px;
+            }
+            @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:424px){
+                font-size: 16px;
+                padding: 10px;
+            }
+        }
+
+        .hrefClose{top:0;}
+
+        .fa_solid{
+            @include Breakpoint.breakpoint-Mobile($break-min:425px, $break-max:767px){
+                left:93.5%;
+                width: 6%;
+            }
+            @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:424px){
+                left:93%;
+                width: 6%;
+            }
+        }
+    }
+}
+
+
+@mixin hrefOpen{
+
+    //Media Queries Mobile
+    @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:767px){
+      
+        @include Breakpoint.breakpoint-Mobile($break-min:425px, $break-max:767px){
+            bottom: 14%;
+        }
+        @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:424px){
+            bottom: 9%;
+        }
+    }
+    
+}
+
+
+@mixin fatrue{
+
+    //Media Queries Mobile
+    @include Breakpoint.breakpoint-Mobile($break-min:425px, $break-max:767px){
+        top:0px;
+        left:93%;
+        width: 5%;
+    }
+    @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:424px){
+        top: 0;
+        left:92%;
+        width: 5%;
+    }
+}
+
+
+
 @mixin description{
 
-    
+    //Media Queries Mobile
     @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:767px){
-        // border: green 1px solid;
         width: 100%;
         font-size:12px;
         padding-top: 15px;
@@ -156,4 +316,4 @@
 }
 
 
-
+//////////////////////////////////////////////////////////////////////////////////////

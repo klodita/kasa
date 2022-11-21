@@ -1,8 +1,380 @@
 @use '../Breakpoint';
 
 
+////////////////// PARTIE MIXIN MEDIA QUERY TABLETTE /////////////////////////
+
+
+@mixin Presentation-Tab{
+
+    // Media Queries Desktop
+    @include Breakpoint.breakpoint-desktop-min($break-min:992px){
+            margin-top : 30px;
+    }
+
+    // Media Query Tablette
+    @include Breakpoint.breakpoint-Tablette($break-min:768px, $break-max:991px){
+        width: 75%;
+        margin-bottom: 100px;
+        
+        .presentation1{
+            .titre, .sousTitre{
+                width: 100%;
+                height: 32px;
+            }
+            .titre{
+                font-size: 1.5rem;
+               
+            }
+            .sousTitre{
+                font-size: 20px;
+                position: relative;
+                top: 12px;
+            }
+        }
+    }
+}
+
+
+
+
+@mixin DivHostEtoile-Tab{
+ 
+    // Media Query Tablette
+    @include Breakpoint.breakpoint-Tablette($break-min:768px, $break-max:991px){
+           
+        main{
+            display: block;
+            position: relative;
+            height: 100%;
+
+            .DivHostEtoile{
+                width: 18%;
+                height: 18%;
+                margin-right:50px;
+                margin-bottom:-50px;
+                position: absolute;
+                top:353px;
+                float: right;
+                right: 0;
+                
+                .presentation2{
+
+                    // Media Query Tablette
+                    @include Breakpoint.breakpoint-Tablette($break-min:768px, $break-max:991px){
+                    width: 100%;
+                    height: 75px;
+                    float: right;
+                    right: 0;
+                    }  
+
+                    .hostName{
+                        // Media Query Tablette
+                        @include Breakpoint.breakpoint-Tablette($break-min:768px, $break-max:991px){
+                            width: 50%;
+                            height: 100%;
+                            font-size: 17px;
+                            padding-inline-end: 0.5rem;
+                            writing-mode: horizontal-tb;
+                            float:left;
+                            left:0;
+                            align-items: center;
+                        }
+                    }
+    
+                    .host{
+                        // Media Query Tablette
+                        @include Breakpoint.breakpoint-Tablette($break-min:768px, $break-max:991px){
+                            width: 62px;
+                            height: 62px;
+                            top:0
+                        }
+                    }  
+                }
+
+                .DivEtoile{
+                    // Media Query Tablette
+                    @include Breakpoint.breakpoint-Tablette($break-min:768px, $break-max:991px){
+                        width: 100%;
+                        height: 30%;
+                        padding: 0;
+                        display: flex;
+                        position: absolute;
+                        top:89px;
+                    }
+
+                    
+                }
+            }
+        }
+         
+    }
+   
+}
+
+
+
+@mixin Divtag-Tab-Desk{
+
+    // Media Query Desktop
+    @include Breakpoint.breakpoint-Desktop($break-min:992px, $break-max:1779px){
+        width: 82%;
+        padding-top:-10px;
+    }
+
+    // Media Query Tablette
+    @include Breakpoint.breakpoint-Tablette($break-min:768px, $break-max:991px){
+        width: 75%;
+        bottom:100px;
+    }
+}
+
+
+@mixin DivCollapse-Tab-Desk{
+    // Media Query Tablette
+    @include Breakpoint.breakpoint-Tablette($break-min:768px, $break-max:991px){
+        top:-50px;
+    }
+}
+
+
+@mixin tag-Tab-Desk{
+
+    // Media Queries Desktop
+    @include Breakpoint.breakpoint-Desktop($break-min:992px, $break-max:1779px){
+        width: 18%;
+        margin-top:0;
+        margin-right: 8px;
+        font-size:14px;
+    }
+
+    // Media Queries Tablette
+    @include Breakpoint.breakpoint-Tablette($break-min:768px, $break-max:991px){
+        width: 23%;
+        font-size: 13px;
+        padding-top: 5px;
+        padding-bottom: 16px;
+        margin-right: 10px;
+    }
+}
+
+
+@mixin titreh2-Desk{
+
+     // Media Query Desktop
+     @include Breakpoint.breakpoint-desktop-min($break-min:992px){
+        width: 100%;
+        height: 49px;
+        font-size:26px;
+        display: flex;
+        position: relative;
+        bottom: 21px;
+
+        @include Breakpoint.breakpoint-desktop-min($break-min:1400px){
+            font-size:36px;
+         
+        }
+        @include Breakpoint.breakpoint-Desktop($break-min:1025px, $break-max:1200px){
+            font-size:27px;
+        }
+     }
+}
+
+@mixin soustitre-Desk{
+
+    // Media Quieries Desktop
+    @include Breakpoint.breakpoint-desktop-min($break-min:992px){
+        width: 90%;
+        display: flex;
+        position: relative;
+        bottom:33%;
+        margin-top:0%;
+    }
+}
+
+
+@mixin presentation2-Desk{
+
+    // Media Query Desktop
+    @include Breakpoint.breakpoint-Desktop($break-min:992px, $break-max:1779px){
+        width: 100%;
+        height:auto;
+        box-sizing: content-box;
+        position: relative;
+        float: right;
+        right: 25px;
+        top:18%;
+
+        @include Breakpoint.breakpoint-Desktop($break-min:1300px, $break-max:1399px){
+            right: 24px;
+        }
+        @include Breakpoint.breakpoint-Desktop($break-min:992px, $break-max:1299px){
+            right: 17px;
+        }
+     }
+}
+
+@mixin hostName-Desk{
+
+    // Media Query Desktop
+    @include Breakpoint.breakpoint-Desktop($break-min:992px, $break-max:1779px){
+        width: 40%;
+        font-size: 1.2rem;
+        margin-right: 0%;
+        position:absolute;
+        float:left;
+        left: 60px;
+
+        @include Breakpoint.breakpoint-Desktop($break-min:1600px, $break-max:1779px){
+            width: 35%;
+            font-size: 1.5rem;
+        }
+        @include Breakpoint.breakpoint-Desktop($break-min:1700px, $break-max:1779px){
+            left: 160px;
+        }
+        @include Breakpoint.breakpoint-Desktop($break-min:1600px, $break-max:1699px){
+            left: 140px;
+        }
+        @include Breakpoint.breakpoint-Desktop($break-min:1401px, $break-max:1599px){
+            font-size: 1.4rem;
+            left: 120px;
+        }
+        @include Breakpoint.breakpoint-Desktop($break-min:1301px, $break-max:1400px){
+            font-size: 1.4rem;
+            left: 100px;
+        }
+        @include Breakpoint.breakpoint-Desktop($break-min:1201px, $break-max:1300px){
+            font-size: 1.4rem;
+            left: 80px;
+        }
+        @include Breakpoint.breakpoint-Desktop($break-min:1183px, $break-max:1200px){
+            font-size: 1.4rem;
+        }
+    }
+}
+
+
+@mixin hostImg-Desk{
+
+    // Media Queries Desktop
+    @include Breakpoint.breakpoint-Desktop($break-min:992px, $break-max:1779px){
+        position:absolute;
+        height: 62px;
+        width: 62px;
+        float: right;
+        right: -8%;
+    }
+}
+
+
+@mixin DivEtoile-Desk {
+
+      // Media Query Desktop
+      @include Breakpoint.breakpoint-Desktop($break-min:992px, $break-max:1779px){
+        .DivHostEtoile{
+            width: 22%;
+            display: flex;
+            position: relative;
+            box-sizing:content-box;
+            @include Breakpoint.breakpoint-Desktop($break-min:1098px, $break-max:1779px){
+                width: 21.5%;
+            }
+           
+
+            .DivEtoile{
+                height: 30%;
+                width: 25%;
+                margin-right:76%;
+                display: flex;
+                position: absolute;
+                float: left;
+                margin-top:8px;
+                align-items:flex-start;
+
+
+                @include Breakpoint.breakpoint-Desktop($break-min:1601px, $break-max:1700px){
+                    left:58%;
+                }
+                @include Breakpoint.breakpoint-Desktop($break-min:1501px, $break-max:1600px){
+                    left:55%;
+                }
+                @include Breakpoint.breakpoint-Desktop($break-min:1401px, $break-max:1500px){
+                    left:49%;
+                    margin-top: 5px;
+                }
+                @include Breakpoint.breakpoint-Desktop($break-min:1301px, $break-max:1400px){
+                    left:50%;
+                }
+                @include Breakpoint.breakpoint-Desktop($break-min:1201px, $break-max:1300px){
+                    left:45%;
+                }
+                @include Breakpoint.breakpoint-Desktop($break-min:1025px, $break-max:1200px){
+                    left:40%;
+                }
+                @include Breakpoint.breakpoint-Desktop($break-min:992px, $break-max:1024px){
+                    left:36%;
+                }
+
+               }
+        
+       }
+    }
+   
+}
+
+
+
+@mixin  imgEtoile-Tab-Desk {
+     
+    // Media Query Desktop
+    @include Breakpoint.breakpoint-Desktop($break-min:992px, $break-max:1779px){
+        padding: 0px;
+        margin:3px;
+    }
+
+    // Media Query Tablette
+    @include Breakpoint.breakpoint-Tablette($break-min:768px, $break-max:991px){
+         width: 15%;
+    }
+   
+}
+
+
+@mixin  etoile-Tab-Desk {
+
+    // Media Queries Desktop
+    @include Breakpoint.breakpoint-Desktop($break-min:992px, $break-max:1779px){
+        display: flex;
+        width: 35%;
+        margin-right:76%;
+        position: relative; 
+    }
+
+
+    // Media Query Tablette
+    @include Breakpoint.breakpoint-Tablette($break-min:768px, $break-max:991px){
+        padding-inline-end: 1rem;
+        writing-mode: horizontal-tb;
+        left:0%;
+    }
+    
+}
+
+
+/////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+////////////// PARTIE MIXIN MEDIA QUERY MOBILE /////////////////////////////////
 
 @mixin Divpresentation{
+
+    //Media Queries Mobile
     @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:767px){
        
        .Divpresentation{
@@ -46,6 +418,8 @@
 
 
 @mixin DivHostEtoile{
+
+    // Media Queries Mobile
     @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:767px){
         .DivHostEtoile{
             width: 100%;
@@ -56,137 +430,125 @@
             margin-bottom: 20px;
             top:0px;
 
-             .presentation2{
-                // border:1px solid blue;
-                width: 30%;
-                height: 33px;
-                flex-direction: column;
-                right : 0px;
-                
-              
-                @include Breakpoint.breakpoint-Mobile($break-min:398px, $break-max:767px){
-                    width: 31%;
-                    height: 43px;
-
-                    @include Breakpoint.breakpoint-Mobile($break-min:600px, $break-max:767px){
-                        width: 25%;
-                        height: 46px;
-                    }
-                    @include Breakpoint.breakpoint-Mobile($break-min:400px, $break-max:430px){
-                        width: 32%;
-                    }
-                }
-                @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:356px){
-                    width: 35%;
-                
-                }
-                
-         
-                .hostName{
+                .presentation2{
                     width: 30%;
-                    font-size: 12px;
-                    left:10%;
-                  
+                    height: 33px;
+                    flex-direction: column;
+                    right : 0px;
+                
                     @include Breakpoint.breakpoint-Mobile($break-min:398px, $break-max:767px){
-                        font-size: 14px;
-                        left:12%;
-                    
+                        width: 31%;
+                        height: 43px;
+
                         @include Breakpoint.breakpoint-Mobile($break-min:600px, $break-max:767px){
-                            font-size: 16px;
-                            left:12%
-                        }
-                        @include Breakpoint.breakpoint-Mobile($break-min:501px, $break-max:599px){
-                            font-size: 15px;
-                            left:20%
-                        }
-                        @include Breakpoint.breakpoint-Mobile($break-min:480px, $break-max:500px){
-                            left:15%
+                            width: 25%;
+                            height: 46px;
                         }
                         @include Breakpoint.breakpoint-Mobile($break-min:400px, $break-max:430px){
-                            left:0%
+                            width: 32%;
                         }
                     }
-                    @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:340px){
-                        left:5%;
+                    @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:356px){
+                        width: 35%;
+                    }
+                
+         
+                    .hostName{
+                        width: 30%;
+                        font-size: 12px;
+                        left:10%;
+                  
+                        @include Breakpoint.breakpoint-Mobile($break-min:398px, $break-max:767px){
+                            font-size: 14px;
+                            left:12%;
                     
-                    }
+                            @include Breakpoint.breakpoint-Mobile($break-min:600px, $break-max:767px){
+                                font-size: 16px;
+                                left:12%
+                            }
+                            @include Breakpoint.breakpoint-Mobile($break-min:501px, $break-max:599px){
+                                font-size: 15px;
+                                left:20%
+                            }
+                            @include Breakpoint.breakpoint-Mobile($break-min:480px, $break-max:500px){
+                                left:15%
+                            }
+                            @include Breakpoint.breakpoint-Mobile($break-min:400px, $break-max:430px){
+                                left:0%
+                            }
+                        }
+                        @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:340px){
+                            left:5%;
                     
-                   
-                 
-                }
-                .host{
-                    width: 32px;
-                    height: 32px;
-                    float:right;
-                    margin-left: 65%;
-
-                    @include Breakpoint.breakpoint-Mobile($break-min:398px, $break-max:767px){
-                        width: 42px;
-                        height: 42px;
-
-                        @include Breakpoint.breakpoint-Mobile($break-min:600px, $break-max:767px){
-                            width: 45px;
-                            height: 45px;
-                            margin-left: 65%;
                         }
-                        @include Breakpoint.breakpoint-Mobile($break-min:501px, $break-max:599px){
-                            margin-left: 71%;
-                        }
-                        @include Breakpoint.breakpoint-Mobile($break-min:480px, $break-max:500px){
-                            margin-left: 68%;
-                        }
-                        
                     }
-                    @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:340px){
+
+                    .host{
+                        width: 32px;
+                        height: 32px;
+                        float:right;
                         margin-left: 65%;
-                    
+
+                        @include Breakpoint.breakpoint-Mobile($break-min:398px, $break-max:767px){
+                            width: 42px;
+                            height: 42px;
+
+                            @include Breakpoint.breakpoint-Mobile($break-min:600px, $break-max:767px){
+                                width: 45px;
+                                height: 45px;
+                                margin-left: 65%;
+                            }
+                            @include Breakpoint.breakpoint-Mobile($break-min:501px, $break-max:599px){
+                                margin-left: 71%;
+                            }
+                            @include Breakpoint.breakpoint-Mobile($break-min:480px, $break-max:500px){
+                                margin-left: 68%;
+                            }
+                        
+                        }
+                        @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:340px){
+                            margin-left: 65%;
+                        }  
                     }
-                    
+                }
+
+                .DivEtoile{
+                    width: 35%;
+                    height: 30px;
+                    left:0px;
+                    top:5px;
+                    @include Breakpoint.breakpoint-Mobile($break-min:600px, $break-max:767px){
+                        width: 25%;
+                    }
+                    @include Breakpoint.breakpoint-Mobile($break-min:400px, $break-max:599px){
+                        width: 30%;
+                    }
                 }
         }
-
-        .DivEtoile{
-            // border:1px solid blue;
-            width: 35%;
-            height: 30px;
-            left:0px;
-            top:5px;
-            @include Breakpoint.breakpoint-Mobile($break-min:600px, $break-max:767px){
-                width: 25%;
-            }
-            @include Breakpoint.breakpoint-Mobile($break-min:400px, $break-max:599px){
-                width: 30%;
-
-            }
-
-        }
-
-
-        }
-       
-
     }
     
 }
 
 @mixin etoileImg{
-   
+
+    // Media Queries Mobile
     @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:767px){
        .img{
             width: 15%;
             margin: 2px; 
-       }
+        }
 
        .etoile{
             left:0;
-       }
-        
+       }  
     }
 }
 
+
 @mixin Divtag{
+
+    // Media Queries Mobile
     @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:767px){
-        // border:1px solid blue;
         width: 100%;
         height: auto;
         top: 0px;
@@ -198,46 +560,46 @@
 
 
 @mixin  tag {
+
+    // Media Queries Mobile
     @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:767px){
-    flex-direction: row;
-    flex-grow: 1;
-    font-size: 12px;
-    height: 18px;
-    width: 30%;
-    padding-top: 5px;
-    padding-bottom:18px;
-    border-radius: 7px;
-    margin-right: 10px;
-    margin-top: 0;
-    margin-bottom: 5px;
+        flex-direction: row;
+        flex-grow: 1;
+        font-size: 12px;
+        height: 18px;
+        width: 30%;
+        padding-top: 5px;
+        padding-bottom:18px;
+        border-radius: 7px;
+        margin-right: 10px;
+        margin-top: 0;
+        margin-bottom: 5px;
         
-    @include Breakpoint.breakpoint-Mobile($break-min:501px, $break-max:767px){
-        font-size: 14px;
-        padding-top: 10px;
-        padding-bottom: 20px;
-    }
-    @include Breakpoint.breakpoint-Mobile($break-min:425px, $break-max:500px){
-        width: 35%;
-        font-size: 14px;
-        padding-top: 9px;
-        padding-bottom: 20px;
-    }
-    @include Breakpoint.breakpoint-Mobile($break-min:380px, $break-max:424px){
-        width: 38%;
-        border-radius: 5px;
-    }
+        @include Breakpoint.breakpoint-Mobile($break-min:501px, $break-max:767px){
+            font-size: 14px;
+            padding-top: 10px;
+            padding-bottom: 20px;
+        }
+        @include Breakpoint.breakpoint-Mobile($break-min:425px, $break-max:500px){
+            width: 35%;
+            font-size: 14px;
+            padding-top: 9px;
+            padding-bottom: 20px;
+        }
+        @include Breakpoint.breakpoint-Mobile($break-min:380px, $break-max:424px){
+            width: 38%;
+            border-radius: 5px;
+        }
    
-    @include Breakpoint.breakpoint-Mobile($break-min:300px, $break-max:379px){
-        width: 44%;
-        border-radius: 5px;
-    }
-    @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:299px){
-        width: 45%;
-        border-radius: 5px;
-    }
-    }
-    
-    
+        @include Breakpoint.breakpoint-Mobile($break-min:300px, $break-max:379px){
+            width: 44%;
+            border-radius: 5px;
+        }
+        @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:299px){
+            width: 45%;
+            border-radius: 5px;
+        }
+    } 
 }
 
 
@@ -245,18 +607,19 @@
 
 
 @mixin DivCollapse{
+
+    // Media Queries Mobile
     @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:767px){
-        // border: 1px solid red;
         flex-direction: column;
-        top: 0px;
-       
-       
+        top: 0px; 
     }
 }
 
+
 @mixin DivCollapse1 {
+
+    // Media Queries Mobile
     @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:767px){
-        // border:1px solid green;
         width: 100%; 
         margin-block-end: 25px;
         writing-mode: horizontal-tb;     
@@ -266,30 +629,34 @@
 
 
 @mixin Descri{
+
+    // Media Queries Mobile
     @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:767px){
         width: 100%; 
         position: relative;
     }
-        
-    
 }
 
+
 @mixin DivCollapse2 {
+
+    // Media Queries Mobile
     @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:767px){
-    // border:1px solid red;
-    width: 100%;
-    
+        width: 100%;
     }
     
 }
 
 @mixin Equip {
+
+    // Media Queries Mobile
     @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:767px){
         width: 100%;
         margin-block-end: 10%;
         writing-mode: horizontal-tb;
-
     }
-       
-
 }
+
+
+///////////////////////////////////////////////////////////////////////////////
+

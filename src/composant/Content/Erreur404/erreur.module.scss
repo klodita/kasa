@@ -1,46 +1,57 @@
+@use '../../../assets/styles/Mixin/mixin_Erreur.scss';
+
 
  .divErreur{
+  
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;  
-}
-.erreur{
-    width: 597px;
-    height: 263px;
-    
-}
+        @include mixin_Erreur.divErreur;
 
-.titreErreur {
-    font-size: 28px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    position: relative;
-    top:60px;
-    
-
-    h1{
-        padding-bottom: 20px;
-        margin: 20px;
-    }
-
-    a{
-        padding-top: 20px;
-        margin-top: 60px;
-        margin-bottom: 50px;
-        cursor: pointer;
-        &:hover{
-            text-decoration: underline;
+        .erreur{
+            width: 557px;
+            object-fit: cover;
+                @include mixin_Erreur.Erreur404;     
         }
-        
-        h2{
-            font-size: 22px;
+
+    .titreErreur {
+    
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        position: relative;
+        top:60px;
+    
+        h1{
+            font-size: 43px;
+            padding-bottom: 20px;
+            margin: 20px;
+            position: relative;
+            top:-12px;
+                @include mixin_Erreur.titreErreur;
+        }
+
+        a{
+            padding-top: 20px;
+            margin-top: 60px;
+            margin-bottom: 50px;
+            cursor: pointer;
+            &:hover{
+                text-decoration: underline;
+            }
+            
+            h2{
+                font-size: 28px;
+                position: relative;
+                top:-39px;
+                    @include mixin_Erreur.titreH2;
+            }
         }
     }
 }
