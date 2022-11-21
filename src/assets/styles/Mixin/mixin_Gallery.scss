@@ -116,9 +116,6 @@
 @mixin numero{
 
     // Media Queries Desktop
-    @include Breakpoint.breakpoint-Desktop($break-min:1780px,$break-max:1919px){
-        bottom:156px;
-    }
     @include Breakpoint.breakpoint-Desktop($break-min:992px,$break-max:1779px){
         width: 86%;
         bottom:384px;

@@ -290,8 +290,8 @@
                 margin-top:8px;
                 align-items:flex-start;
 
-
-                @include Breakpoint.breakpoint-Desktop($break-min:1601px, $break-max:1700px){
+               
+                @include Breakpoint.breakpoint-Desktop($break-min:1601px, $break-max:1799px){
                     left:58%;
                 }
                 @include Breakpoint.breakpoint-Desktop($break-min:1501px, $break-max:1600px){
