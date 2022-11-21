@@ -66,17 +66,12 @@
 
     //Media queries Mobile 
     @include Breakpoint.breakpoint($break-min:0px, $break-max:767px){
-        width: 7%;
-        height: 5%;
+        width: 8%;
+        top:46px;
     }
-    @include Breakpoint.breakpoint-Mobile($break-min:501px, $break-max:767px){
-        top:226px;
-    }
-    @include Breakpoint.breakpoint-Mobile($break-min:426px, $break-max:500px){
-        top:25%;
-    }
-    @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:500px){
-        top:111px;
+   
+    @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:767px){
+        
     }
     
 }
