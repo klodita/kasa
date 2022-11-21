@@ -141,12 +141,12 @@
 
 @mixin accueil{
 
-    //  //Media Queries Tablette
+    //Media Queries Tablette
     @include Breakpoint.breakpoint-Tablette($break-min:768px, $break-max:991px){
         width: 42%;
     }
 
-    // //Media Queries Mobiles
+    //Media Queries Mobiles
     @include Breakpoint.breakpoint-Mobile($break-min:0px, $break-max:767px){
 
         @include Breakpoint.breakpoint-Mobile($break-min:650px, $break-max:767px){

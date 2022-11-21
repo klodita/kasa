@@ -17,9 +17,6 @@
         @include Breakpoint.breakpoint-Mobile($break-min:1728px,$break-max:1728px){
             min-height: 70vh;
         }
-        // @include Breakpoint.breakpoint-Mobile($break-min:1080px,$break-max:1080px){
-        //     min-height: 83vh;
-        // }
         @include Breakpoint.breakpoint-Mobile($break-min:1024px,$break-max:1024px){
             min-height: 75vh;
         }
