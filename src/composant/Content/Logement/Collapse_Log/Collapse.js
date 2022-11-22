@@ -25,7 +25,7 @@ function CollapseLog({ titre, description }) {
     }
   }
 
-  function FlehcheOpen() {
+  function FlecheOpen() {
     if (open === true) {
       return (
         <div>
@@ -53,7 +53,7 @@ function CollapseLog({ titre, description }) {
       </div>
       {open && (
         <div className={collapse.annonces}>
-          <FlehcheOpen />
+          <FlecheOpen />
           <div className={collapse.description}>{description}</div>
         </div>
       )}

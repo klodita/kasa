@@ -1,8 +1,7 @@
-// import styles from '../../../composant/Content/content.module.scss'
-import Collapse from './Collapse'
+import Collapse from './Collapse/Collapse_Apropos'
 import image from '../../../assets/images/header_AproposDesktop.png'
 import img from '../../../assets/images/header_AproposMobile.png'
-import styles from '../Apropos/collapse.module.scss'
+import styles from '../Apropos/Collapse/collapse.module.scss'
 
 function ContentApropos() {
   return (

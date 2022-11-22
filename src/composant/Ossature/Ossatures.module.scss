@@ -2,7 +2,9 @@
 
 /* Permet d'avoir une hauteur limite minimum selon les hauteur d'écran Tablette et Mobile ,
 ce travail est effectué suite à une vérification dans l'inspecteur avec les différentes appareiles 
-pour avoir une aperçue par exemple d'une tablette Nexus 7 ou un Ipad mini...*/
+pour avoir un aperçu réel d'une tablette Nexus 7 ou d'un Ipad mini par exemple, lorsque le site est 
+affiché sur un emulateur d'un appareil smartphone ou tablette voir même ordinateur de bureau*/
+
 main{
     @include mixin_Ossatures.Ossatures-Height;
 }

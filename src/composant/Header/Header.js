@@ -11,24 +11,29 @@ function Header() {
 
       <nav className={styles.navigation}>
         <ul>
-          <NavLink
-            to="/home"
-            className={({ isActive }) =>
-              isActive ? styles.accueilActive : styles.accueil
-            }
-          >
-            Accueil
-          </NavLink>
+          <li>
+            <NavLink
+              to="/home"
+              className={({ isActive }) =>
+                isActive ? styles.accueilActive : styles.accueil
+              }
+            >
+              Accueil
+            </NavLink>
+          </li>
         </ul>
+
         <ul>
-          <NavLink
-            to="/apropos"
-            className={({ isActive }) =>
-              isActive ? styles.aproposActive : styles.apropos
-            }
-          >
-            A Propos
-          </NavLink>
+          <li>
+            <NavLink
+              to="/apropos"
+              className={({ isActive }) =>
+                isActive ? styles.aproposActive : styles.apropos
+              }
+            >
+              A Propos
+            </NavLink>
+          </li>
         </ul>
       </nav>
     </header>

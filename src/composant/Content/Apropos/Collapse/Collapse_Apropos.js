@@ -1,6 +1,6 @@
 import collapse from './collapse.module.scss'
 import React, { useState } from 'react'
-import fleche from '../../../assets/images/fleche.svg'
+import fleche from '../../../../assets/images/fleche.svg'
 
 function Collapse({ titre, description }) {
   const [open, setOpen] = useState(false)
@@ -19,7 +19,7 @@ function Collapse({ titre, description }) {
     }
   }
 
-  function FlehcheOpen() {
+  function FlecheOpen() {
     if (open === true) {
       return (
         <div>
@@ -52,7 +52,7 @@ function Collapse({ titre, description }) {
             href={`#${titre}`}
             onClick={() => setOpen(!open)}
           >
-            <FlehcheOpen />
+            <FlecheOpen />
           </a>
           <div className={collapse.description}>{description}</div>
         </div>
