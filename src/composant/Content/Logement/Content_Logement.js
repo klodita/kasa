@@ -68,11 +68,7 @@ function Logement() {
 
             <div className={logeStyle.DivCollapse2}>
               <div className={logeStyle.Equip}>
-                <CollapseLog
-                  titre="Equipements"
-                  description={<Equipmt />}
-                  className={logeStyle.ess}
-                />
+                <CollapseLog titre="Equipements" description={<Equipmt />} />
               </div>
             </div>
           </div>
