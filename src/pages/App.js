@@ -1,11 +1,11 @@
 import React from 'react'
-import Router from './Routes/Router'
+import Routes from './Routes/Routes'
 import styles from './App.module.scss'
 
 function App() {
   return (
     <div className={styles.appContainer}>
-      <Router />
+      <Routes />
     </div>
   )
 }
